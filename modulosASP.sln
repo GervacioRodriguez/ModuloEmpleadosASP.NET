@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{A2CA9A79-F4A6-
 		alertas_usuarios.js = alertas_usuarios.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "estilos", "estilos", "{8201302F-A8F2-43F8-896D-5B275B525F9E}"
+	ProjectSection(SolutionItems) = preProject
+		Style.css = Style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

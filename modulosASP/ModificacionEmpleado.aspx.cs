@@ -24,14 +24,14 @@ namespace modulosASP
                 //string empleado = "select concat('"+txtNum_empleado.Text+"',num_empleado) as num_empleado from T_Fechas union all select concat('"+txtNum_empleado.Text+"',num_empleado) from Vi_Empleados_131020";
                 
                  string empleado =   @"select " + 
-                                     "T_Fechas.Num_Empleado,"+
+                                     "T_Fechas.Num_Empleado, "+
                                      "Vi_Empleados_131020.Nombre, "+
                                      "Vi_Empleados_131020.Fecha_Alta, "+
                                      "Vi_Empleados_131020.Fecha_Baja, " +
                                      "Vi_Empleados_131020.Fecha_Alta_Imss,"+
                                      "Vi_Empleados_131020.Fecha_Baja_Imss "+
                                      "from T_Fechas inner join Vi_empleados_131020  on " +
-                                     "T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado; ";
+                                     "T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado";
                 
                 /*si llegara a fallar checar si los espacios estan bien definidos recuerda que la concatenación
                  reconec entre espacios y no*/
