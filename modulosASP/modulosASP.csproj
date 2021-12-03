@@ -72,6 +72,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="connDB.cs" />
     <Compile Include="ModificacionEmpleado.aspx.cs">
       <DependentUpon>ModificacionEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,6 +87,7 @@
     <Compile Include="ModuloDenisse.aspx.designer.cs">
       <DependentUpon>ModuloDenisse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="operacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

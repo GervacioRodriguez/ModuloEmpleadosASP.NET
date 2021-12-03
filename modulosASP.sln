@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "estilos", "estilos", "{8201
 		Style.css = Style.css
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBCNN", "DBCNN", "{C62D8607-24C5-44A3-AA28-E6AB69CF22B8}"
+	ProjectSection(SolutionItems) = preProject
+		modulosASP\connDB.cs = modulosASP\connDB.cs
+		modulosASP\operacion.cs = modulosASP\operacion.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

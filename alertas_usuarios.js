@@ -1,7 +1,8 @@
 // JavaScript source code
-
-<script type = "text/javascrip" language="javascript">
-function alerta_de_existencia() {
-    alert("el dato se encutra en la base de datos")
-}
+<script language="JavaScript" type="text/javascript">
+    window.history.forward(1);
+    function urlVolver() {
+        hidden = open('ListadoReclamos.aspx', 'NewWindow', 'top=0,left=0,width=720,height=820,status=yes,resizable=yes,scrollbars=yes');
+    __doPostBack("Obj");
+        }
 </script>

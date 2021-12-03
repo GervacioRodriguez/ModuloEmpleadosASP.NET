@@ -17,12 +17,18 @@ namespace modulosASP
 
         }
 
+        //validacion de textbox
+
         protected void Button2_Click(object sender, EventArgs e)
         {
+            string script = "window.alert('Texto a mostrar¿);";
+            ScriptManager.RegisterStartupScript(this,typeof(Page),"popup",script,true);
+            //se hara la comprobación para chechar que solo reciba numero y que sean de 6 digitos
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
-                //string empleado = "select concat('"+txtNum_empleado.Text+"',num_empleado) as num_empleado from T_Fechas union all select concat('"+txtNum_empleado.Text+"',num_empleado) from Vi_Empleados_131020";
                 
+                //string empleado = "select concat('"+txtNum_empleado.Text+"',num_empleado) as num_empleado from T_Fechas union all select concat('"+txtNum_empleado.Text+"',num_empleado) from Vi_Empleados_131020";
+                /*
                  string empleado =   @"select " + 
                                      "T_Fechas.Num_Empleado, "+
                                      "Vi_Empleados_131020.Nombre, "+
@@ -32,9 +38,9 @@ namespace modulosASP
                                      "Vi_Empleados_131020.Fecha_Baja_Imss "+
                                      "from T_Fechas inner join Vi_empleados_131020  on " +
                                      "T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado";
-                
-                /*si llegara a fallar checar si los espacios estan bien definidos recuerda que la concatenación
-                 reconec entre espacios y no*/
+
+                si llegara a fallar checar si los espacios estan bien definidos recuerda que la concatenación
+                 reconec entre espacios y no
 
                 SqlCommand command = new SqlCommand(empleado,conn);
                 SqlDataAdapter dato = new SqlDataAdapter(command);
@@ -51,7 +57,7 @@ namespace modulosASP
                     txtFecha_baja.Text = misfilas["fecha_baja"].ToString();
 
                 
-                }
+                }*/
             }
         }
     }

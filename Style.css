@@ -1,12 +1,12 @@
-﻿body
-{
-  width: 600px;
-  margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+﻿body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #4000FF;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
 }
 
 .paneldatos1{
     border: double;
+
 }
