@@ -11,11 +11,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            Ingrese el numero de empleado consta de seis digitos<br />
+            <br />
             <asp:TextBox ID="txteliminar" runat="server" Width="180px"></asp:TextBox>
-            <asp:Button ID="btnborrar" runat="server" OnClick="btnborrar_Click" Text="borrar elemento" />
+            <asp:Button ID="btnborrar" runat="server" OnClick="btnborrar_Click" Text="borrar elemento" OnClientClick="return confirm('El Expediente fue eliminado con exito  ʕ•ᴥ•ʔ');" />
             <br />
             <br />
-            <asp:Button ID="btnborrar0" runat="server" OnClick="btnborrar_Click" Text="lanzar javascrip" />
         </div>
     </form>
 </body>

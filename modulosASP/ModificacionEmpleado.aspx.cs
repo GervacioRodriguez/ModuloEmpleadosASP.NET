@@ -21,7 +21,17 @@ namespace modulosASP
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
+                string empleado =   "select" + 
+                                    "T_Fechas.Num_Empleado,"+
+                                    "Vi_Empleados_131020.Nombre,"+
+                                    "Vi_Empleados_131020.Fecha_Alta,"+
+                                    "Vi_Empleados_131020.Fecha_Baja," +
+                                    "Vi_Empleados_131020.Fecha_Alta_Imss,"+
+                                    "Vi_Empleados_131020.Fecha_Baja_Imss"+
+                                    "from T_Fechas inner join Vi_empleados_131020  on " +
+                                    " T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado; ";
 
+                SqlCommand command = new SqlCommand(empleado,conn);
                 //string borrar = ("DELETE FROM t_FExpediente WHERE num_empleado = '" + txteliminar.Text + "' ");
                // SqlCommand commado = new SqlCommand(borrar, conn);
                // conn.Open();
