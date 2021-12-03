@@ -16,7 +16,7 @@ namespace modulosASP
             try
             {
                 string sql = "";
-                SqlCommand cmd = new SqlCommand(sql,dB);
+                SqlCommand cmd = new SqlCommand(sql,cnn.GetConnection());
             }
             catch
             {
