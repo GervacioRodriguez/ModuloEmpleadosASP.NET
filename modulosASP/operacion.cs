@@ -12,7 +12,7 @@ namespace modulosASP
     {
         public bool InsertarPersona(string rut, string nombre,string apellido)
         {
-            connDB dB = new connDB();
+            connDB cnn = new connDB();
             try
             {
                 string sql = "";
