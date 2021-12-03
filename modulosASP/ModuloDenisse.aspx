@@ -16,7 +16,6 @@
             <br />
             <br />
             <asp:Button ID="btnborrar0" runat="server" OnClick="btnborrar_Click" Text="lanzar javascrip" />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
         </div>
     </form>
 </body>
