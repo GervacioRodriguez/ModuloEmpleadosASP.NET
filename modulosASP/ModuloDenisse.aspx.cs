@@ -19,21 +19,14 @@ namespace modulosASP
 
         protected void btnborrar_Click(object sender, EventArgs e)
         {
-            //string denisse = "window.confirm('El usuario ya Fue Eliminado')";
-
-            //string mensajelemento_borrado = "window.confirm('El Elemento no existe')";
-
+            
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
                 string borrar = ("DELETE FROM t_FExpediente WHERE num_empleado = '" + txteliminar.Text + "'");
                 SqlCommand commado = new SqlCommand(borrar, conn);
                 conn.Open();
                 commado.ExecuteNonQuery();
-                Response.Write("<script>alert('Hello');</script>");
-                // ScriptManager.RegisterStartupScript(this,GetType(),"msg",denisse,true);
                 Response.Redirect("ModuloDenisse.aspx");
-                
-
 
             }
         }

@@ -21,23 +21,37 @@ namespace modulosASP
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
-                string empleado =   "select" + 
-                                    "T_Fechas.Num_Empleado,"+
-                                    "Vi_Empleados_131020.Nombre,"+
-                                    "Vi_Empleados_131020.Fecha_Alta,"+
-                                    "Vi_Empleados_131020.Fecha_Baja," +
-                                    "Vi_Empleados_131020.Fecha_Alta_Imss,"+
-                                    "Vi_Empleados_131020.Fecha_Baja_Imss"+
-                                    "from T_Fechas inner join Vi_empleados_131020  on " +
-                                    " T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado; ";
+                //string empleado = "select concat('"+txtNum_empleado.Text+"',num_empleado) as num_empleado from T_Fechas union all select concat('"+txtNum_empleado.Text+"',num_empleado) from Vi_Empleados_131020";
+                
+                 string empleado =   @"select " + 
+                                     "T_Fechas.Num_Empleado,"+
+                                     "Vi_Empleados_131020.Nombre, "+
+                                     "Vi_Empleados_131020.Fecha_Alta, "+
+                                     "Vi_Empleados_131020.Fecha_Baja, " +
+                                     "Vi_Empleados_131020.Fecha_Alta_Imss,"+
+                                     "Vi_Empleados_131020.Fecha_Baja_Imss "+
+                                     "from T_Fechas inner join Vi_empleados_131020  on " +
+                                     "T_Fechas.Num_Empleado = Vi_Empleados_131020.num_empleado; ";
+                
+                /*si llegara a fallar checar si los espacios estan bien definidos recuerda que la concatenación
+                 reconec entre espacios y no*/
 
                 SqlCommand command = new SqlCommand(empleado,conn);
-                //string borrar = ("DELETE FROM t_FExpediente WHERE num_empleado = '" + txteliminar.Text + "' ");
-               // SqlCommand commado = new SqlCommand(borrar, conn);
-               // conn.Open();
-                //commado.ExecuteNonQuery();
-                //Response.Write(" < script> el elemento fue borrado </ script > ");
-                //txteliminar.Text = " ";
+                SqlDataAdapter dato = new SqlDataAdapter(command);
+                dato.SelectCommand.Parameters.Add("@empleado", SqlDbType.NVarChar).Value = Int64.Parse(txtNum_empleado.Text);
+                DataTable dt = new DataTable();
+                dato.Fill(dt);
+                conn.Open();
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow misfilas = dt.Rows[0];
+                    Label_NumEmpl.Text = misfilas["Num_empleado"].ToString();
+                    Label_Nombre.Text = misfilas["Nombre"].ToString();
+                    txtFecha_alta.Text = misfilas["fecha_alta"].ToString();
+                    txtFecha_baja.Text = misfilas["fecha_baja"].ToString();
+
+                
+                }
             }
         }
     }
