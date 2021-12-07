@@ -10,7 +10,7 @@ namespace modulosASP
 {
     public class operacion
     {
-        public bool InsertarPersona(string rut, string nombre,string apellido)
+        /*        public bool InsertarPersona(string rut, string nombre,string apellido)
         {
             connDB cnn = new connDB();
             try
@@ -22,6 +22,7 @@ namespace modulosASP
             {
 
             }
-        }
+        }*/
+
     }
 }

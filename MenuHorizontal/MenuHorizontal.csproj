@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{351EE1E3-B1B2-4337-99D6-6FAC67090821}</ProjectGuid>
+    <ProjectGuid>{A847E237-B8E8-4FC8-8656-DEB8C5360D32}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>modulosASP</RootNamespace>
-    <AssemblyName>modulosASP</AssemblyName>
+    <RootNamespace>MenuHorizontal</RootNamespace>
+    <AssemblyName>MenuHorizontal</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -67,44 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Menu Horizontal.aspx" />
-    <Content Include="ModificacionEmpleado.aspx" />
-    <Content Include="ModuloDenisse.aspx" />
-    <Content Include="Reclutamiento.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="connDB.cs" />
-    <Compile Include="Menu Horizontal.aspx.cs">
-      <DependentUpon>Menu Horizontal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Menu Horizontal.aspx.designer.cs">
-      <DependentUpon>Menu Horizontal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ModificacionEmpleado.aspx.cs">
-      <DependentUpon>ModificacionEmpleado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModificacionEmpleado.aspx.designer.cs">
-      <DependentUpon>ModificacionEmpleado.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloDenisse.aspx.cs">
-      <DependentUpon>ModuloDenisse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModuloDenisse.aspx.designer.cs">
-      <DependentUpon>ModuloDenisse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="operacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reclutamiento.aspx.cs">
-      <DependentUpon>Reclutamiento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reclutamiento.aspx.designer.cs">
-      <DependentUpon>Reclutamiento.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -128,9 +94,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2056</DevelopmentServerPort>
+          <DevelopmentServerPort>1704</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2056/</IISUrl>
+          <IISUrl>http://localhost:1704/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

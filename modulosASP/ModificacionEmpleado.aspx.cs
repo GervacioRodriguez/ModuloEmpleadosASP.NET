@@ -26,7 +26,30 @@ namespace modulosASP
             //se hara la comprobación para chechar que solo reciba numero y que sean de 6 digitos
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["connDB"].ConnectionString))
             {
+                String empleado1 = "select * from T_fechas.Num_empleado where num_empleado = '"+txtNum_empleado.Text+"'";
+                string empleado2 = "select * from Vi_empleados_131020 where num_empleado = '" + txtNum_empleado.Text + "'";
+                string empleado3 = "Vi_Empleados_131020.Fecha_Alta where num_empleado = '" + txtNum_empleado.Text + "'";
+                string empleado4 = "Vi_Empleados_131020.Fecha_Alta_Imss where num_empleado = '" + txtNum_empleado.Text + "'";
+                string empleado5 = "Vi_Empleados_131020.Fecha_Baja_Imss where num_empleado = '" + txtNum_empleado.Text + "'";
+
+                SqlCommand command = new SqlCommand(empleado1, conn);
+                SqlDataAdapter dato = new SqlDataAdapter(command);
+                dato.SelectCommand.Parameters.Add("@empleado", SqlDbType.NVarChar).Value = Int64.Parse(txtNum_empleado.Text);
+                DataTable dt = new DataTable();
+                dato.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow misfilas = dt.Rows[0];
+                    Label_NumEmpl.Text = misfilas["Num_empleado"].ToString();
+                    Label_Nombre.Text = misfilas["Nombre"].ToString();
+                    txtFecha_alta.Text = misfilas["fecha_alta"].ToString();
+                    txtFecha_baja.Text = misfilas["fecha_baja"].ToString();
+
+
+                }
                 
+
                 //string empleado = "select concat('"+txtNum_empleado.Text+"',num_empleado) as num_empleado from T_Fechas union all select concat('"+txtNum_empleado.Text+"',num_empleado) from Vi_Empleados_131020";
                 /*
                  string empleado =   @"select " + 
