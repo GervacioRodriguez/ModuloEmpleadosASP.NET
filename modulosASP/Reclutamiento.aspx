@@ -49,6 +49,38 @@
             <asp:Panel ID="aprobado" runat="server">
                 <asp:Label ID="lb_aprobado" runat="server" Text="El candidato "></asp:Label>
                 <br />
+                <asp:RadioButton ID="apto" runat="server" Text="El candidato es apto"/>
+                <br />
+                <asp:Label ID="lb_apto" Text="Razones por las que es apto" runat="server" /><br <br />
+                <asp:RadioButton ID="rbArmado" Text="Armado" runat="server"/><br />
+                <asp:RadioButton ID="rbDesarmado" Text="Desarmado" runat="server"/><br />
+                <asp:RadioButton ID="rbAmbos" Text="Ambos"  runat="server"/>
+
+            </asp:Panel>
+
+            <asp:Panel ID="vacantes" runat="server">
+                
+
+                <%--este sección del codigo jalara desde el catalogo de estados y se llenara un dropdown-lis 
+                    entre lazado para porder ir jalando la informacion osea 
+                    selecionara el
+                    Estado
+                        |--> municipio
+                                |-->proyecto
+                                        |-->Antiguedad
+                                                |-->vacante
+                    --%>
+                <asp:Label ID="lb_vacantes" runat="server" Text="Vacantes"></asp:Label>
+                <br />
+                <asp:Label ID="Lb_Estado" runat="server" Text="Estado"></asp:Label>
+                <br />
+                <asp:DropDownList ID="estado" runat="server" Width="230px"></asp:DropDownList><br />
+                <asp:Label ID="lbMunicipio" runat="server" Text="Municipio"></asp:Label><br />
+                <asp:DropDownList ID="Municipio" runat="server" Width="230px"></asp:DropDownList><br />
+                <asp:Label ID="lbproyecto" runat="server" Text="Proyecto"></asp:Label><br />
+                <asp:DropDownList ID="Proyecto" runat="server" Width="230px"></asp:DropDownList><br />
+                <asp:Label ID="lbtipo" runat="server" Text="Tipo"></asp:Label><br />
+                <asp:DropDownList ID="Antiguedad" runat="server" Width="230px"></asp:DropDownList>
 
             </asp:Panel>
             <br />
