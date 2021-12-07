@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarElemento.aspx" />
     <Content Include="Menu Horizontal.aspx" />
     <Content Include="ModificacionEmpleado.aspx" />
     <Content Include="ModuloDenisse.aspx" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarElemento.aspx.cs">
+      <DependentUpon>AgregarElemento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarElemento.aspx.designer.cs">
+      <DependentUpon>AgregarElemento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="connDB.cs" />
     <Compile Include="Menu Horizontal.aspx.cs">
       <DependentUpon>Menu Horizontal.aspx</DependentUpon>

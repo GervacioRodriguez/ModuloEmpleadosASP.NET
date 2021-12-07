@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace modulosASP
 {
-    public partial class Reclutamiento : System.Web.UI.Page
+    public partial class AgregarElemento : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarElemento.aspx");
         }
     }
 }

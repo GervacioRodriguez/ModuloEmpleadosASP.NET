@@ -10,6 +10,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar elemento" Width="161px" />
+            <br />
+            <br />
             <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
             <asp:TextBox ID="txtnombre" runat="server" Width="294px"></asp:TextBox>
             <br />
@@ -74,9 +77,13 @@
                 <br />
                 <asp:Label ID="Lb_Estado" runat="server" Text="Estado"></asp:Label>
                 <br />
-                <asp:DropDownList ID="estado" runat="server" Width="230px"></asp:DropDownList><br />
+                <asp:DropDownList ID="estado" runat="server" Width="230px" AutoPostBack="True" DataSourceID="estadosql" DataTextField="Estado" DataValueField="Estado"></asp:DropDownList>
+                <asp:SqlDataSource ID="estadosql" runat="server" ConnectionString="<%$ ConnectionStrings:conexiondeEstado %>" SelectCommand="SELECT [Estado] FROM [C_Estado]"></asp:SqlDataSource>
+                <br />
                 <asp:Label ID="lbMunicipio" runat="server" Text="Municipio"></asp:Label><br />
-                <asp:DropDownList ID="Municipio" runat="server" Width="230px"></asp:DropDownList><br />
+                <asp:DropDownList ID="Municipio" runat="server" Width="230px" DataSourceID="combodependiente"></asp:DropDownList>
+                <asp:SqlDataSource ID="combodependiente" runat="server" ConnectionString="Data Source=192.168.11.75;Initial Catalog=Seic;User ID=sa;Password=Seicsa123" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Municipio] FROM [C_Municipios]"></asp:SqlDataSource>
+                <br />
                 <asp:Label ID="lbproyecto" runat="server" Text="Proyecto"></asp:Label><br />
                 <asp:DropDownList ID="Proyecto" runat="server" Width="230px"></asp:DropDownList><br />
                 <asp:Label ID="lbtipo" runat="server" Text="Tipo"></asp:Label><br />
