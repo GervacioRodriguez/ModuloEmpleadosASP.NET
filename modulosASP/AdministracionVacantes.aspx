@@ -27,6 +27,20 @@
                 </asp:Panel>
             <br />
             <br />
+
+            <asp:Panel ID="estatus" runat="server">
+                Estado<br />
+                <asp:DropDownList ID="DropDownList4" runat="server" Width="200px">
+                </asp:DropDownList>
+                <br />
+                <br />
+                Municipio<br />
+                <asp:DropDownList ID="DropDownList5" runat="server" Width="200px">
+                </asp:DropDownList>
+            </asp:Panel>
+            <asp:Panel ID="vacantes" runat="server">
+
+            </asp:Panel>
         </div>
     </form>
 </body>
