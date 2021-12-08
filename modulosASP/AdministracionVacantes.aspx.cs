@@ -27,7 +27,16 @@ namespace modulosASP
             DPproyecto.DataBind();
             DPproyecto.Items.Insert(0,new ListItem("[Seleccione un Proyecto]","0"));
             DPsubproyecto.Items.Insert(0,new ListItem("[Seleccione un Sub-proyecto]","0"));
-            DPservicio.Items.Insert(0,new ListItem("[Seleccione un servicio]","0"));
+            DPservicio.Items.Insert(0,new ListItem("[Seleccione un Servicio]","0"));
+
+            //llenado del dropdown de estado y municipio
+
+            DPestado.DataSource = consultar("Select * from c_estado");
+            DPestado.DataTextField = "Estado";
+            DPestado.DataValueField = "id";
+            DPestado.DataBind();
+            DPestado.Items.Insert(0,new ListItem("[Seleccione el estado]","0"));
+            DPmunicipio.Items.Insert(0,new ListItem("[Seleccione el municipio]","0"));
         }
 
         public DataSet consultar(string stringSQL)
@@ -38,14 +47,14 @@ namespace modulosASP
             SqlCommand cmd = new SqlCommand(stringSQL, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds);   //no puedes pasar de un char a un int
+            da.Fill(ds);  
             return ds; 
          }
 
         protected void DPporyecto(object sender, EventArgs e)
         {
             int idSubproyecto = Convert.ToInt32(DPproyecto.SelectedValue);
-            DPsubproyecto.DataSource = consultar("select * from C_SubProyecto where proyecto =" + idSubproyecto);
+            DPsubproyecto.DataSource = consultar("select * from C_SubProyecto where proyecto ="+idSubproyecto);
             DPsubproyecto.DataTextField = "subproyecto";
             DPsubproyecto.DataValueField = "proyecto";
             DPsubproyecto.DataBind();
@@ -55,11 +64,21 @@ namespace modulosASP
         protected void DPservicio_index(object sender, EventArgs e)
         {
             int idServicio = Convert.ToInt32(DPsubproyecto.SelectedValue);
-            DPservicio.DataSource = consultar("select * from c_servicio ="+idServicio);
+            DPservicio.DataSource = consultar("select * from c_servicio where ="+idServicio);
             DPservicio.DataTextField = "servicio";
-            DPservicio.DataValueField = "estado";
+            DPservicio.DataValueField = "proyecto";
             DPservicio.DataBind();
-            DPservicio.Items.Insert(0,new ListItem("[Seleccionar]","0"));
+            DPservicio.Items.Insert(0,new ListItem("[Seleccionar el sub proyecto]","0"));
+        }
+
+        protected void DPestado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int idEstado = Convert.ToInt32(DPservicio.SelectedValue);
+            DPestado.DataSource = consultar("select * from c_municipio="+idEstado);
+            DPestado.DataTextField = "municipio";
+            DPestado.DataValueField = "id_estado";
+            DPestado.DataBind();
+            DPestado.Items.Insert(0,new ListItem("[Seleccione el municipio]","0"));
         }
     }
 }

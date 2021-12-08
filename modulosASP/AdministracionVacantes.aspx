@@ -30,13 +30,18 @@
 
             <asp:Panel ID="estatus" runat="server">
                 Estado<br />
-                <asp:DropDownList ID="DPestado" runat="server" Width="200px">
+                <asp:DropDownList ID="DPestado" runat="server" Width="200px" OnSelectedIndexChanged="DPestado_SelectedIndexChanged">
                 </asp:DropDownList>
                 <br />
                 <br />
                 Municipio<br />
                 <asp:DropDownList ID="DPmunicipio" runat="server" Width="200px">
                 </asp:DropDownList>
+            </asp:Panel>
+            <asp:Panel ID="ubicacion" runat="server">
+                ubicacion de los inmuebles: <br />
+                <asp:Label ID="direccion" runat="server" Text="Direccion del inmueble: "></asp:Label>
+                <asp:Label ID="lbdireccion" runat="server"></asp:Label>
             </asp:Panel>
         </div>
     </form>
