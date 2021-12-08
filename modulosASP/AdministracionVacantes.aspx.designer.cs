@@ -33,31 +33,31 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Panel Vacantes;
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control DPproyecto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DPproyecto;
 
         /// <summary>
-        /// Control DropDownList2.
+        /// Control DPsubproyecto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList DPsubproyecto;
 
         /// <summary>
-        /// Control DropDownList3.
+        /// Control DPservicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList DPservicio;
 
         /// <summary>
         /// Control estatus.
@@ -69,30 +69,21 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Panel estatus;
 
         /// <summary>
-        /// Control DropDownList4.
+        /// Control DPestado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList DPestado;
 
         /// <summary>
-        /// Control DropDownList5.
+        /// Control DPmunicipio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
-
-        /// <summary>
-        /// Control vacantes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel vacantes;
+        protected global::System.Web.UI.WebControls.DropDownList DPmunicipio;
     }
 }

@@ -12,17 +12,17 @@
         <div>
             <asp:Panel ID="Vacantes" runat="server">
                     Proyecto<br />
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
+                    <asp:DropDownList ID="DPproyecto" runat="server" Width="200px" OnSelectedIndexChanged="DPporyecto" AutoPostBack="True">
                     </asp:DropDownList>
                     <br />
                     <br />
                     Sub proyecto<br />
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="200px">
+                    <asp:DropDownList ID="DPsubproyecto" runat="server" Width="200px" AutoPostBack="True" >
                     </asp:DropDownList>
                     <br />
                     <br />
                     Servicio<br />
-                    <asp:DropDownList ID="DropDownList3" runat="server" Width="200px">
+                    <asp:DropDownList ID="DPservicio" runat="server" Width="200px" AutoPostBack="True">
                     </asp:DropDownList>
                 </asp:Panel>
             <br />
@@ -30,16 +30,13 @@
 
             <asp:Panel ID="estatus" runat="server">
                 Estado<br />
-                <asp:DropDownList ID="DropDownList4" runat="server" Width="200px">
+                <asp:DropDownList ID="DPestado" runat="server" Width="200px">
                 </asp:DropDownList>
                 <br />
                 <br />
                 Municipio<br />
-                <asp:DropDownList ID="DropDownList5" runat="server" Width="200px">
+                <asp:DropDownList ID="DPmunicipio" runat="server" Width="200px">
                 </asp:DropDownList>
-            </asp:Panel>
-            <asp:Panel ID="vacantes" runat="server">
-
             </asp:Panel>
         </div>
     </form>
