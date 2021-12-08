@@ -15,17 +15,19 @@ namespace modulosASP
         {
             if (!IsPostBack)
             {
-                iniciarllenadodropdwon();
+                iniciar_llenadodropdwon();
 
             }
         }
-        private void iniciarllenadodropdwon()
+        private void iniciar_llenadodropdwon()
         {
             DPproyecto.DataSource = consultar("select * from c_proyecto");
             DPproyecto.DataTextField = "proyecto";
             DPproyecto.DataValueField = "id";
             DPproyecto.DataBind();
-            DPproyecto.Items.Insert(0,new ListItem("[Seleccionar]","0"));
+            DPproyecto.Items.Insert(0,new ListItem("[Seleccione un Proyecto]","0"));
+            DPsubproyecto.Items.Insert(0,new ListItem("[Seleccione un Sub-proyecto]","0"));
+            DPservicio.Items.Insert(0,new ListItem("[Seleccione un servicio]","0"));
         }
 
         public DataSet consultar(string stringSQL)
@@ -43,12 +45,21 @@ namespace modulosASP
         protected void DPporyecto(object sender, EventArgs e)
         {
             int idSubproyecto = Convert.ToInt32(DPproyecto.SelectedValue);
-            DPsubproyecto.DataSource = consultar("select * from C_SubProyecto where subproyecto =" + idSubproyecto);
-            DPsubproyecto.DataTextField = "sub proyecto";
-            DPsubproyecto.DataValueField = "ID sub proyecto";
+            DPsubproyecto.DataSource = consultar("select * from C_SubProyecto where proyecto =" + idSubproyecto);
+            DPsubproyecto.DataTextField = "subproyecto";
+            DPsubproyecto.DataValueField = "proyecto";
             DPsubproyecto.DataBind();
-            DPsubproyecto.Items.Insert(0, new ListItem("[Seleccionar]", "0"));
+            DPsubproyecto.Items.Insert(0, new ListItem("[Seleccionar]","0"));
+        }
 
+        protected void DPservicio_index(object sender, EventArgs e)
+        {
+            int idServicio = Convert.ToInt32(DPsubproyecto.SelectedValue);
+            DPservicio.DataSource = consultar("select * from c_servicio ="+idServicio);
+            DPservicio.DataTextField = "servicio";
+            DPservicio.DataValueField = "estado";
+            DPservicio.DataBind();
+            DPservicio.Items.Insert(0,new ListItem("[Seleccionar]","0"));
         }
     }
 }

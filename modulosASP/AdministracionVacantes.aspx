@@ -12,17 +12,17 @@
         <div>
             <asp:Panel ID="Vacantes" runat="server">
                     Proyecto<br />
-                    <asp:DropDownList ID="DPproyecto" runat="server" Width="200px" OnSelectedIndexChanged="DPporyecto" AutoPostBack="True">
+                    <asp:DropDownList ID="DPproyecto" runat="server" Width="290px"  AutoPostBack="True" OnSelectedIndexChanged="DPporyecto">
                     </asp:DropDownList>
                     <br />
                     <br />
                     Sub proyecto<br />
-                    <asp:DropDownList ID="DPsubproyecto" runat="server" Width="200px" AutoPostBack="True" >
+                    <asp:DropDownList ID="DPsubproyecto" runat="server" Width="400px" AutoPostBack="True" >
                     </asp:DropDownList>
                     <br />
                     <br />
                     Servicio<br />
-                    <asp:DropDownList ID="DPservicio" runat="server" Width="200px" AutoPostBack="True">
+                    <asp:DropDownList ID="DPservicio" runat="server" Width="290px" AutoPostBack="True" OnSelectedIndexChanged="DPservicio_index">
                     </asp:DropDownList>
                 </asp:Panel>
             <br />
