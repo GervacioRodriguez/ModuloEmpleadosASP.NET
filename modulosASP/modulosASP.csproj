@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdministracionVacantes.aspx" />
     <Content Include="AgregarElemento.aspx" />
     <Content Include="Menu Horizontal.aspx" />
     <Content Include="ModificacionEmpleado.aspx" />
@@ -75,6 +76,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministracionVacantes.aspx.cs">
+      <DependentUpon>AdministracionVacantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionVacantes.aspx.designer.cs">
+      <DependentUpon>AdministracionVacantes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarElemento.aspx.cs">
       <DependentUpon>AgregarElemento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
