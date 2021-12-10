@@ -27,7 +27,7 @@
             <br />
 
             <asp:Label ID="label5" runat="server" Text="Fuente de Reclutamiento"></asp:Label>
-            <asp:Panel ID="redessociales" runat="server">
+            <asp:Panel ID="redessociales" runat="server" Width="757px">
                 <asp:RadioButton ID="facebook" runat="server" Text="Facebook"/>
                     <asp:RadioButton ID="volanteo" runat="server" Text="Volanteo"/>
                     <br />

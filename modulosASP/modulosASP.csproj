@@ -67,8 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Actualizar_ejecutivo_y_elementos.aspx" />
     <Content Include="AdministracionVacantes.aspx" />
     <Content Include="AgregarElemento.aspx" />
+    <Content Include="Agregar_ejecutivo_c_proyecto.aspx" />
     <Content Include="Menu Horizontal.aspx" />
     <Content Include="ModificacionEmpleado.aspx" />
     <Content Include="ModuloDenisse.aspx" />
@@ -76,6 +78,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizar_ejecutivo_y_elementos.aspx.cs">
+      <DependentUpon>Actualizar_ejecutivo_y_elementos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actualizar_ejecutivo_y_elementos.aspx.designer.cs">
+      <DependentUpon>Actualizar_ejecutivo_y_elementos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionVacantes.aspx.cs">
       <DependentUpon>AdministracionVacantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,6 +98,13 @@
     </Compile>
     <Compile Include="AgregarElemento.aspx.designer.cs">
       <DependentUpon>AgregarElemento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_ejecutivo_c_proyecto.aspx.cs">
+      <DependentUpon>Agregar_ejecutivo_c_proyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_ejecutivo_c_proyecto.aspx.designer.cs">
+      <DependentUpon>Agregar_ejecutivo_c_proyecto.aspx</DependentUpon>
     </Compile>
     <Compile Include="connDB.cs" />
     <Compile Include="Menu Horizontal.aspx.cs">

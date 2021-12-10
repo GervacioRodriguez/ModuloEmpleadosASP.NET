@@ -12,7 +12,7 @@
         <div>
             <asp:Panel ID="Vacantes" runat="server">
                     Proyecto<br />
-                    <asp:DropDownList ID="DPproyecto" runat="server" Width="290px"  AutoPostBack="True" OnSelectedIndexChanged="DPporyecto">
+                    <asp:DropDownList ID="DPproyecto" runat="server" Width="399px"  AutoPostBack="True" OnSelectedIndexChanged="DPporyecto" Height="24px">
                     </asp:DropDownList>
                     <br />
                     <br />

@@ -22,19 +22,25 @@
                     <br />
                     <asp:Label ID="Label5" runat="server" Text="Numero  de empleado"></asp:Label>
                     <br />
-                    <asp:Label ID="Label_NumEmpl" runat="server"></asp:Label>
+                    <br />
+                    <asp:Label ID="LBNUM_EMPLEADO" runat="server"></asp:Label>
+                    <br />
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Nombre del elemento"></asp:Label>
+                    <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                     <br />
-                    <asp:Label ID="Label_Nombre" runat="server"></asp:Label>
+                    <asp:Label ID="LBNOMBRE" runat="server"></asp:Label>
                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    <br />
                     <br />
                     <br />
         &nbsp;Estatus:&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtEstatus" runat="server" Width="140px"></asp:TextBox>
+        &nbsp;
+                    <asp:Label ID="LBESTATUS" runat="server"></asp:Label>
                     <br />
-        &nbsp;<br />
+                    &nbsp;<br />
                     <asp:Label ID="Label4" runat="server" Text="NN: Numero de nomina"></asp:Label>
                     :&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtNN" runat="server" style="margin-left: 18px" Width="276px"></asp:TextBox>

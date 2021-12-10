@@ -41,10 +41,10 @@ namespace modulosASP
 
         public DataSet consultar(string stringSQL)
         {
-            string stconn = "Data Source=192.168.11.75;Initial Catalog=Seic;User ID=sa; Password = Seicsa123";
+            string stconn = "Data Source=192.168.11.75; Initial Catalog=Seic;Persist Security Info=True;User ID=sa;Password=Seicsa123;";
             SqlConnection con = new SqlConnection(stconn);
             con.Open();
-            SqlCommand cmd = new SqlCommand(stringSQL, con);
+            SqlCommand cmd = new SqlCommand(stringSQL,con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);  
@@ -64,7 +64,7 @@ namespace modulosASP
         protected void DPservicio_index(object sender, EventArgs e)
         {
             int idServicio = Convert.ToInt32(DPsubproyecto.SelectedValue);
-            DPservicio.DataSource = consultar("select * from c_servicio where ="+idServicio);
+            DPservicio.DataSource = consultar("select * from c_servicio where =" +idServicio);
             DPservicio.DataTextField = "servicio";
             DPservicio.DataValueField = "proyecto";
             DPservicio.DataBind();
@@ -74,7 +74,7 @@ namespace modulosASP
         protected void DPestado_SelectedIndexChanged(object sender, EventArgs e)
         {
             int idEstado = Convert.ToInt32(DPservicio.SelectedValue);
-            DPestado.DataSource = consultar("select * from c_municipio="+idEstado);
+            DPestado.DataSource = consultar("select * from c_municipio=" +idEstado);
             DPestado.DataTextField = "municipio";
             DPestado.DataValueField = "id_estado";
             DPestado.DataBind();

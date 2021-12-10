@@ -69,13 +69,13 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Control Label_NumEmpl.
+        /// Control LBNUM_EMPLEADO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_NumEmpl;
+        protected global::System.Web.UI.WebControls.Label LBNUM_EMPLEADO;
 
         /// <summary>
         /// Control Label2.
@@ -87,13 +87,13 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control Label_Nombre.
+        /// Control LBNOMBRE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_Nombre;
+        protected global::System.Web.UI.WebControls.Label LBNOMBRE;
 
         /// <summary>
         /// Control txtEstatus.
@@ -103,6 +103,15 @@ namespace modulosASP
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEstatus;
+
+        /// <summary>
+        /// Control LBESTATUS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBESTATUS;
 
         /// <summary>
         /// Control Label4.
