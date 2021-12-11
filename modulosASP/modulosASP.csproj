@@ -70,7 +70,7 @@
     <Content Include="Actualizar_ejecutivo_y_elementos.aspx" />
     <Content Include="AdministracionVacantes.aspx" />
     <Content Include="AgregarElemento.aspx" />
-    <Content Include="Agregar_ejecutivo_c_proyecto.aspx" />
+    <Content Include="buscarEjecutivo.aspx" />
     <Content Include="Menu Horizontal.aspx" />
     <Content Include="ModificacionEmpleado.aspx" />
     <Content Include="ModuloDenisse.aspx" />
@@ -99,12 +99,12 @@
     <Compile Include="AgregarElemento.aspx.designer.cs">
       <DependentUpon>AgregarElemento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Agregar_ejecutivo_c_proyecto.aspx.cs">
-      <DependentUpon>Agregar_ejecutivo_c_proyecto.aspx</DependentUpon>
+    <Compile Include="buscarEjecutivo.aspx.cs">
+      <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Agregar_ejecutivo_c_proyecto.aspx.designer.cs">
-      <DependentUpon>Agregar_ejecutivo_c_proyecto.aspx</DependentUpon>
+    <Compile Include="buscarEjecutivo.aspx.designer.cs">
+      <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
     </Compile>
     <Compile Include="connDB.cs" />
     <Compile Include="Menu Horizontal.aspx.cs">

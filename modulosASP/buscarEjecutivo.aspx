@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Agregar_ejecutivo_c_proyecto.aspx.cs" Inherits="modulosASP.Agregar_ejecutivo_c_proyecto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscarEjecutivo.aspx.cs" Inherits="modulosASP.Agregar_ejecutivo_c_proyecto" %>
 
 <!DOCTYPE html>
 

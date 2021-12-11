@@ -9,17 +9,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Panel ID="P_ejecutivo" runat="server">
-                Ejecutivo:<br />
-                <asp:Label ID="lbEjecutivo" runat="server"></asp:Label><br />
-                <asp:DataGrid ID="Elementos" runat="server" AutoGenerateColumns="false">
-                    <Columns>
-                        <asp:BoundField />
-                    </Columns>
-                </asp:DataGrid>
-            </asp:Panel>
-        </div>
+        <asp:Panel ID="Panel1" runat="server">
+            Datos del ejecutivo<br />
+            <br />
+            Numero de ejecutivo:<br />
+            <asp:TextBox ID="txtEjecutivo" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buscar ejecutivo" Width="113px" />
+            <br />
+            <br />
+            Numero:&nbsp;
+            <asp:Label ID="LBEJECUTIVO" runat="server"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            Ejecutivo:
+            <asp:Label ID="LBNUMEJECUTIVO" runat="server"></asp:Label>
+            <br />
+            Nombre:
+            <asp:Label ID="LBNOMBRE" runat="server"></asp:Label>
+            <br />
+            Area :
+            <asp:Label ID="LBAREA" runat="server"></asp:Label>
+        </asp:Panel>
     </form>
 </body>
 </html>

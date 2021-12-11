@@ -16,21 +16,25 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label6" runat="server" Text="Empleado"></asp:Label>
                     <br />
-                    <asp:TextBox ID="txtNum_empleado" runat="server" Width="224px" ></asp:TextBox>
+                    <asp:TextBox ID="txtNum_empleado" runat="server" Width="224px" MaxLength="6" ></asp:TextBox>
 
                     <asp:Button ID="btn_buscar" runat="server" OnClick="Button2_Click" Text="Buscar" Width="144px" />
+                    <br />
+                    <asp:Panel ID="Panel1" runat="server" Height="83px">
+                        <asp:RadioButton ID="Modifica" runat="server" />
+                    </asp:Panel>
                     <br />
                     <asp:Label ID="Label5" runat="server" Text="Numero  de empleado"></asp:Label>
                     <br />
                     <br />
-                    <asp:Label ID="LBNUM_EMPLEADO" runat="server"></asp:Label>
+                    <asp:Label ID="LBNUM_EMPLEADO" runat="server" ForeColor="#000099"></asp:Label>
                     <br />
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Nombre del elemento"></asp:Label>
                     <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                     <br />
-                    <asp:Label ID="LBNOMBRE" runat="server"></asp:Label>
+                    <asp:Label ID="LBNOMBRE" runat="server" ForeColor="#000099"></asp:Label>
                     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                     <br />
                     <br />
