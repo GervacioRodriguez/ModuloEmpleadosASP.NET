@@ -8,6 +8,17 @@
     <title></title>
 </head>
 <body>
+    <form id="form2" runat="server">
+        <div>
+            <asp:Panel ID="estado" runat="server">
+                nombre Del candidato:
+                <asp:Label ID="lb_nombre" Text="" runat="server"></asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="lb_proceso" Text="" runat="server"></asp:Label>
+            </asp:Panel>
+        </div>
+    </form>
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Vacantes" runat="server">

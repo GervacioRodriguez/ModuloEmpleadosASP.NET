@@ -33,13 +33,22 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Control txtEjecutivo.
+        /// Control dp_ejecutivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEjecutivo;
+        protected global::System.Web.UI.WebControls.DropDownList dp_ejecutivo;
+
+        /// <summary>
+        /// Control DropDownList3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
 
         /// <summary>
         /// Control Button1.

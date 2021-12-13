@@ -10,10 +10,13 @@
 <body>
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server">
-            Datos del ejecutivo<br />
+            Datos del ejecutivo<br /> Ejecutivo: de origen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ejecutivo destino<br />
+            <asp:DropDownList ID="dp_ejecutivo" runat="server" Width="197px">
+            </asp:DropDownList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownList3" runat="server" Width="182px">
+            </asp:DropDownList>
             <br />
-            Numero de ejecutivo:<br />
-            <asp:TextBox ID="txtEjecutivo" runat="server"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buscar ejecutivo" Width="113px" />
             <br />
             <br />

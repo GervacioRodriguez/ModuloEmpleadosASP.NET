@@ -23,7 +23,7 @@ namespace modulosASP
             string ejecutivo = "select * from Vi_Empleados_131020 where num_empleado = @ejecutivo";
             
             SqlCommand Bejecutivo = new SqlCommand(ejecutivo,conn);
-            Bejecutivo.Parameters.AddWithValue("@ejecutivo",txtEjecutivo.Text);
+            Bejecutivo.Parameters.AddWithValue("@ejecutivo",dp_ejecutivo.Text);
             SqlDataReader eje = Bejecutivo.ExecuteReader();
             conn.Open();
             if (eje.Read())
