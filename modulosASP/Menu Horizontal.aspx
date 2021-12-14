@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Vertical">
                 <Items>
                     <asp:MenuItem NavigateUrl="~/reportesmensuales" Text="Menu1" value="1"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/reportes_uno_dos" Text="Menu2" Value="2"></asp:MenuItem>
