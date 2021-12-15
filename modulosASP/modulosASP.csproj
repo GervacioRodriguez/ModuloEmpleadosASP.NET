@@ -72,10 +72,10 @@
     <Content Include="AgregarElemento.aspx" />
     <Content Include="Alta_de_nuevo_candidato.aspx" />
     <Content Include="buscarEjecutivo.aspx" />
-    <Content Include="Menu Horizontal.aspx" />
-    <Content Include="ModificacionEmpleado.aspx" />
+    <Content Include="ModificarEstatusElemento.aspx" />
     <Content Include="ModuloDenisse.aspx" />
     <Content Include="Reclutamiento.aspx" />
+    <Content Include="UpdateElemento.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,19 +115,12 @@
       <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
     </Compile>
     <Compile Include="connDB.cs" />
-    <Compile Include="Menu Horizontal.aspx.cs">
-      <DependentUpon>Menu Horizontal.aspx</DependentUpon>
+    <Compile Include="ModificarEstatusElemento.aspx.cs">
+      <DependentUpon>ModificarEstatusElemento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu Horizontal.aspx.designer.cs">
-      <DependentUpon>Menu Horizontal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ModificacionEmpleado.aspx.cs">
-      <DependentUpon>ModificacionEmpleado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModificacionEmpleado.aspx.designer.cs">
-      <DependentUpon>ModificacionEmpleado.aspx</DependentUpon>
+    <Compile Include="ModificarEstatusElemento.aspx.designer.cs">
+      <DependentUpon>ModificarEstatusElemento.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModuloDenisse.aspx.cs">
       <DependentUpon>ModuloDenisse.aspx</DependentUpon>
@@ -144,6 +137,13 @@
     </Compile>
     <Compile Include="Reclutamiento.aspx.designer.cs">
       <DependentUpon>Reclutamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateElemento.aspx.cs">
+      <DependentUpon>UpdateElemento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateElemento.aspx.designer.cs">
+      <DependentUpon>UpdateElemento.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
