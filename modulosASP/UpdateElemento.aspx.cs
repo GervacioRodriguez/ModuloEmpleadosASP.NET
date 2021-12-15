@@ -11,10 +11,9 @@ namespace modulosASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
-       // String Valor1 = Request.QueryString["Valor1"];
 
-        //resultado1 =SessionParameter["valor1"];
+        string empleado = "Select From Vi_empleado131020 where num_empleado = '"+lb+"'";
     }
 }

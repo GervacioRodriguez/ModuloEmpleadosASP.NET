@@ -72,24 +72,15 @@ namespace modulosASP
 
         protected void dtelemento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-     
-
-            string valor1;
-            string valor2;
-
-
-            foreach (GridViewRow rows in this.dtelemento.Rows)
+            foreach (GridView Rows in this.dtelemento.Rows)
             {
-                valor1 = dtelemento.DataKeys[rows.RowIndex]["0"].ToString();
-                Response.Redirect("UpdateElemento.aspx?valor1"+valor1);
-
-                valor2 = dtelemento.DataKeys[rows.RowIndex]["1"].ToString();
-
-               
-
-
+                string valor1; 
+                valor1= dtelemento.DataKeys[Rows.EditIndex]["0"].ToString();
+                
+            
             }
+
+
         }
     }
 }
