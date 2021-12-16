@@ -6,6 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #Text1 {
+            width: 246px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,6 +39,18 @@
             <br />
             Fecha baja:<br />
             <asp:TextBox ID="txtfecha_baja" runat="server" Width="192px"></asp:TextBox>
+            <br />
+            <br />
+            Proyecto
+            <asp:TextBox ID="txtproyecto" runat="server" Width="281px"></asp:TextBox>
+            <br />
+            <br />
+            sub-proyecto:
+            <asp:TextBox ID="txtsubproyecto" runat="server" Width="436px"></asp:TextBox>
+            <br />
+            <br />
+            Servicio
+            <asp:TextBox ID="txtservicio" runat="server" Width="470px"></asp:TextBox>
             <br />
             <br />
             <br />

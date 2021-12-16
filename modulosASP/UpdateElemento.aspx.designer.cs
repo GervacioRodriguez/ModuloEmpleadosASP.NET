@@ -87,6 +87,33 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtfecha_baja;
 
         /// <summary>
+        /// Control txtproyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtproyecto;
+
+        /// <summary>
+        /// Control txtsubproyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsubproyecto;
+
+        /// <summary>
+        /// Control txtservicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtservicio;
+
+        /// <summary>
         /// Control btnActualizar.
         /// </summary>
         /// <remarks>

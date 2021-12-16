@@ -13,10 +13,9 @@
             <br />
             <asp:Label ID="Label1" runat="server" Text="# Elemento"></asp:Label>
             <asp:TextBox ID="txtnumelento" runat="server" Width="264px"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buscar" Width="159px" />
+            <asp:Button ID="Button1" runat="server" OnClick="btnBuscar" Text="Buscar" Width="159px" />
             <br />
-            Ejecutivo Actual:
-            <asp:Label ID="lb_ejecutivo" runat="server"></asp:Label>
+            Ejecutivo Actual: <asp:Label ID="lb_ejecutivo" runat="server"></asp:Label>
             <br />
             <br />
             <br />

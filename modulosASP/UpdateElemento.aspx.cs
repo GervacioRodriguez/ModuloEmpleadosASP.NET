@@ -24,13 +24,16 @@ namespace modulosASP
             {
                 lb_NumElemento.Text = registro["num_empleado"].ToString();
                 lb_nombre.Text = registro["nombre"].ToString();
-                txtnombres.Text = registro["Nombres"].ToString();
+                txtnombres.Text = registro["Nombre"].ToString();
                 txtApaterno.Text = registro["apaterno"].ToString();
                 txtAmaterno.Text = registro["amaterno"].ToString();
                 txtFecha_alta.Text = registro["fecha_alta"].ToString();
                 txtfecha_baja.Text = registro["fecha_baja"].ToString();
                 txtejecutivo.Text = registro["ejecutivoN"].ToString();
                 txtNumEjecutivo.Text = registro["ejecutivo"].ToString();
+                txtproyecto.Text = registro["proyectoN"].ToString();
+                txtsubproyecto.Text = registro["subproyecton"].ToString();
+                txtservicio.Text = registro["servicioN"].ToString();
             }
 
         }
