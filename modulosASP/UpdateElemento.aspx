@@ -36,11 +36,20 @@
             <asp:TextBox ID="txtfecha_baja" runat="server" Width="192px"></asp:TextBox>
             <br />
             <br />
-            Cambiar ejecutivo:<br />
-            <asp:TextBox ID="txtejecutivo" runat="server"  Width="195px"></asp:TextBox>
             <br />
-            Nombre del ejecutivo:<br />
             <asp:Button ID="btnActualizar" runat="server" Height="25px" OnClick="btnActualizar_Click" Text="Actualizar" Width="119px" />
+
+            <br />
+            <br />
+            <br />
+            <asp:RadioButton ID="RbEjecutivo" runat="server" OnCheckedChanged="RdEjecutivo_CheckedChanged" Text="Cambiar Ejecutivo" />
+            <br />
+            <br />
+            Cambiar ejecutivo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Num ejecutivo<br />
+            <asp:TextBox ID="txtejecutivo" runat="server"  Width="195px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtNumEjecutivo" runat="server"></asp:TextBox>
+            <br />
 
         </div>
     </form>

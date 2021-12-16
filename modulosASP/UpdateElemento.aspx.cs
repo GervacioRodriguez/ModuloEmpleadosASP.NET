@@ -30,12 +30,13 @@ namespace modulosASP
                 txtFecha_alta.Text = registro["fecha_alta"].ToString();
                 txtfecha_baja.Text = registro["fecha_baja"].ToString();
                 txtejecutivo.Text = registro["ejecutivoN"].ToString();
+                txtNumEjecutivo.Text = registro["ejecutivo"].ToString();
             }
 
         }
 
 
-        public void Empleado()
+        public void Empleado(EventArgs args )
         {
            // var num_id;
             SqlConnection conn = new SqlConnection("Data Source=192.168.11.75; Initial Catalog=Seic;Persist Security Info=True;User ID=sa;Password=Seicsa123;");
@@ -49,6 +50,8 @@ namespace modulosASP
             {
                 lb_nombre.Text = registro["num_empleado"].ToString();
 
+
+
                 conn.Close();
             }
 
@@ -61,12 +64,31 @@ namespace modulosASP
              query para actualizar datos del empelado recuerda que la actualizacion debera ser tabla
              por taba
                 update t_empleado set nombres = 'valro1', Apaterno= 'valor2',Amaterno = 'valor3' where num_empleado = 'txtNumEmpleado.txt'
+                update T_empleado set nombre = '"+txtApaterno.text+"','"+txtAmaterno.text+"',"'+txtNombre.text+'" where num_empleado = '"+txtNumempelado+"'; 
+                
+             
              */
+
             SqlCommand command = new SqlCommand(actualizar,conn);
             command.ExecuteNonQuery();
+            conn.Close();
+            /*
+             string actualizar1 = "update t_proyecto set proyecto = '"+txtproyecto.tex+"',"'";
+             
+             */
+
+
 
         }
 
-      
+        protected void RdEjecutivo_CheckedChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
+            /*si el ususario le da click al radio button se activara las casilla para modificar al ejecutivo */
+            
+            SqlCommand command = new SqlCommand();
+            RbEjecutivo.Enabled = true;
+            
+        }
     }
 }

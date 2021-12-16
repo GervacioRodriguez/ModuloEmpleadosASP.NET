@@ -13,7 +13,7 @@ namespace modulosASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -36,22 +36,6 @@ namespace modulosASP
             dtelemento.DataBind();
 
             /*
-            string valor1;
-            string valor2;
-         
-
-            foreach (GridViewRow rows in this.dtelemento.Rows)
-            {
-                valor1 = dtelemento.DataKeys[rows.RowIndex]["0"].ToString();
-
-                valor2 = dtelemento.DataKeys[rows.RowIndex]["1"].ToString();
-
-                Session["valor1"] = valor1;
-                Session["valor2"] = valor2;
-
-
-            }*/
-            /*
                 
           */
         }
@@ -64,12 +48,16 @@ namespace modulosASP
 
         protected void dtelemento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (GridView Rows in this.dtelemento.Rows)
+            string valor1 = dtelemento.SelectedRow.Cells[0].ToString();
+            //string valor2 = ;
+            Response.Redirect("UpdateElemento.aspx?valor1="+valor1);
+            /*foreach (GridView Rows in this.dtelemento.Rows)
             {
                 string valor1,valor2,valor3,valor4,valor5;
 
                 //valor1 = dtelemento.Rows[0].Cells[0].ToString();
-                valor1 = dtelemento.DataKeys[Rows.SelectedIndex]["0"].ToString();
+                //valor1 = dtelemento.DataKeys[Rows.SelectedIndex]["0"].ToString();
+                valor1 = dtelemento.DataKeys[Rows.SelectedIndex]["1"].ToString();
                 valor2 = dtelemento.DataKeys[Rows.SelectedIndex]["1"].ToString();
                 valor3 = dtelemento.DataKeys[Rows.SelectedIndex]["2"].ToString();
                 valor4 = dtelemento.DataKeys[Rows.SelectedIndex]["3"].ToString();
@@ -80,10 +68,14 @@ namespace modulosASP
                 Response.Redirect("UpdateElemento.aspx?valor3="+valor3);
                 Response.Redirect("UpdateElemento.aspx?valor4="+valor4);
                 Response.Redirect("UpdateElemento.aspx?valor5="+valor5);
+            */
+        }
 
-            }
-
-
+        protected void dtelemento_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            //string valor1 = dtelemento.Rows[].Cells[1].ToString();
+            //Response.Write("UpdateElemento.aspx?valor5="+valor1);
         }
     }
+    
 }

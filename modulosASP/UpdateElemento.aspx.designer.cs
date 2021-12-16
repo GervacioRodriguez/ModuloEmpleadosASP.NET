@@ -87,6 +87,24 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtfecha_baja;
 
         /// <summary>
+        /// Control btnActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
+
+        /// <summary>
+        /// Control RbEjecutivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbEjecutivo;
+
+        /// <summary>
         /// Control txtejecutivo.
         /// </summary>
         /// <remarks>
@@ -96,12 +114,12 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtejecutivo;
 
         /// <summary>
-        /// Control btnActualizar.
+        /// Control txtNumEjecutivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizar;
+        protected global::System.Web.UI.WebControls.TextBox txtNumEjecutivo;
     }
 }
