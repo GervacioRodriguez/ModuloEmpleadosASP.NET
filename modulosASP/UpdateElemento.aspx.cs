@@ -55,6 +55,16 @@ namespace modulosASP
         }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection("Data Source=192.168.11.75; Initial Catalog=Seic;Persist Security Info=True;User ID=sa;Password=Seicsa123;");
+            string actualizar = "select * from T_empleado";
+            /*
+             query para actualizar datos del empelado recuerda que la actualizacion debera ser tabla
+             por taba
+                update t_empleado set nombres = 'valro1', Apaterno= 'valor2',Amaterno = 'valor3' where num_empleado = 'txtNumEmpleado.txt'
+             */
+            SqlCommand command = new SqlCommand(actualizar,conn);
+            command.ExecuteNonQuery();
+
         }
 
       
