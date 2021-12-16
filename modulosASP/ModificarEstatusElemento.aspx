@@ -21,7 +21,7 @@
             <br />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="editar" />
             <br />
-            <asp:GridView ID="dtelemento" runat="server" BorderStyle="Ridge" OnSelectedIndexChanged="dtelemento_SelectedIndexChanged" >
+            <asp:GridView ID="dtelemento" runat="server" BorderStyle="Ridge" OnPageIndexChanged="dtelemento_SelectedIndexChanged" OnSelectedIndexChanged="dtelemento_SelectedIndexChanged" >
                 <Columns>
                     <asp:ButtonField Text="Editar" >
                     <ControlStyle BorderStyle="Solid" />

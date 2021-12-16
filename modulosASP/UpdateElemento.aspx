@@ -19,28 +19,28 @@
             <br />
             <br />
             Nombres:
-            <asp:TextBox ID="TextBox3" runat="server" Width="238px"></asp:TextBox>
+            <asp:TextBox ID="txtnombres" runat="server" Width="238px"></asp:TextBox>
             <br />
             <br />
-            Apellido Paterno:<asp:TextBox ID="TextBox4" runat="server" Width="195px"></asp:TextBox>
+            Apellido Paterno:<asp:TextBox ID="txtApaterno" runat="server" Width="195px"></asp:TextBox>
             <br />
             <br />
-            Apellido Materno:<asp:TextBox ID="TextBox5" runat="server" Width="195px"></asp:TextBox>
+            Apellido Materno:<asp:TextBox ID="txtAmaterno" runat="server" Width="189px"></asp:TextBox>
             <br />
             <br />
             Fecha de alta<br />
-            <asp:TextBox ID="TextBox2" runat="server" Width="192px"></asp:TextBox>
+            <asp:TextBox ID="txtFecha_alta" runat="server" Width="192px"></asp:TextBox>
             <br />
             <br />
             Fecha baja:<br />
-            <asp:TextBox ID="TextBox1" runat="server" Width="192px"></asp:TextBox>
+            <asp:TextBox ID="txtfecha_baja" runat="server" Width="192px"></asp:TextBox>
             <br />
             <br />
             Cambiar ejecutivo:<br />
+            <asp:TextBox ID="txtejecutivo" runat="server"  Width="195px"></asp:TextBox>
             <br />
-            Nombre del ejecutivo:<asp:DropDownList ID="DropDownList1" runat="server" Height="23px" Width="250px">
-            </asp:DropDownList>
-            <br />
+            Nombre del ejecutivo:<br />
+            <asp:Button ID="btnActualizar" runat="server" Height="25px" OnClick="btnActualizar_Click" Text="Actualizar" Width="119px" />
 
         </div>
     </form>
