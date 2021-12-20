@@ -104,24 +104,32 @@ namespace modulosASP
 
         protected void Actualizar_nombre_Click(object sender, EventArgs e)
         {
+            /*
             SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
-            //string actualizar1 = "update "
-            SqlCommand command = new SqlCommand();
+            string actualizar1 = "update t_empleado set Nombres='"++"'"
+            string actualizar1 = "update t_empleado set Nombres = @Nombres,Apaterno = @Apaterno, Amaterno=@Amaterno where num_empleado = @numEmpleado";
+            conn.Open();
+            SqlCommand command = new SqlCommand(actualizar1,conn);
+            command.Parameters.AddWithValue("@nombres",txtnombres.Text);
+            command.Parameters.AddWithValue("@Apaterno",txtApaterno.Text);
+            command.Parameters.AddWithValue("@Amaterno",txtAmaterno.Text);
+            command.ExecuteNonQuery();
+            */
+
         }
 
         protected void Actulizar_fechas_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
-            string fecha = "update t_fechas set fecha_alta = '" + txtFecha_alta.Text + "',fecha_baja= '" + txtfecha_baja.Text + "' where num_empleado = '" + lb_NumElemento.Text + "'";
+            string fecha = "update t_fechas set fecha_alta = @fechaAlta,fecha_baja = @fechabaja where num_empleado = @numempleado";
+            conn.Open();
             SqlCommand command = new SqlCommand(fecha, conn);
+            command.Parameters.AddWithValue("@fechaAlta",txtFecha_alta.Text);
+            command.Parameters.AddWithValue("@fechaBaja",txtfecha_baja.Text);
+            command.Parameters.AddWithValue("@numempleado",lb_NumElemento.Text);
             command.ExecuteNonQuery();
         }
 
-        protected void DPproyecto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //--- Show results in page.
-            Response.Write("Selected Text is " + DPproyecto + " and selected value is :" + DPproyecto);
-
-        }
+    
     }
 }

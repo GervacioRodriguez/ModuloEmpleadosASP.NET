@@ -8,6 +8,14 @@
     <title></title>
 </head>
 <body>
+    <asp:ScriptManager ID="sm" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/js/alertas_usuario.js"/>
+        </Scripts>
+    </asp:ScriptManager>
+
+
+
     <form id="form1" runat="server">
         <div>
             <asp:LinkButton ID="lbt_ejecutivo" runat="server" OnClick="lbt_ejecutivo_Click">Buecar ejecutivo</asp:LinkButton>
@@ -17,14 +25,12 @@
             <asp:Label ID="Label1" runat="server" Text="# Elemento"></asp:Label>
             <asp:TextBox ID="txtelemento" runat="server" Width="204px"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" OnClick="btnBuscar" Text="Buscar" Width="159px" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="editar" Width="152px" />
             <br />
             Ejecutivo Actual: <asp:Label ID="lb_ejecutivo" runat="server"></asp:Label>
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="editar" />
+            <asp:Button ID="btnEStratus" runat="server" OnClick="btnjavascript_Click" Text="Cambiar estatus elemento" />
             <br />
             <asp:GridView ID="dtelemento" runat="server" BorderStyle="Ridge" OnRowDataBound="dtelemento_RowDataBound" >
                 <Columns>
@@ -33,6 +39,9 @@
                     </asp:ButtonField>
                 </Columns>
             </asp:GridView>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             <br />

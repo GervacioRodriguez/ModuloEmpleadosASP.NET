@@ -52,8 +52,6 @@
             <asp:Label ID="lb_proyecto" runat="server" BorderStyle="None"></asp:Label>
 &nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtproyecto" runat="server" Width="281px"></asp:TextBox>
-            <asp:DropDownList ID="DPproyecto" runat="server" AutoPostBack="True" Height="16px" OnSelectedIndexChanged="DPproyecto_SelectedIndexChanged" Width="111px">
-            </asp:DropDownList>
             <br />
             <br />
             sub-proyecto:&nbsp;
