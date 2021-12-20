@@ -72,6 +72,7 @@
     <Content Include="AgregarElemento.aspx" />
     <Content Include="Alta_de_nuevo_candidato.aspx" />
     <Content Include="buscarEjecutivo.aspx" />
+    <Content Include="menu_vertical.aspx" />
     <Content Include="ModificarEstatusElemento.aspx" />
     <Content Include="ModuloDenisse.aspx" />
     <Content Include="Reclutamiento.aspx" />
@@ -115,6 +116,13 @@
       <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
     </Compile>
     <Compile Include="connDB.cs" />
+    <Compile Include="menu_vertical.aspx.cs">
+      <DependentUpon>menu_vertical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu_vertical.aspx.designer.cs">
+      <DependentUpon>menu_vertical.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ModificarEstatusElemento.aspx.cs">
       <DependentUpon>ModificarEstatusElemento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

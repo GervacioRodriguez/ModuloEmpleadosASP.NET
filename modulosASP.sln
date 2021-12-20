@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBCNN", "DBCNN", "{C62D8607
 		modulosASP\operacion.cs = modulosASP\operacion.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "reportes", "reportes", "{E2E0F56B-FE0E-4FB2-AA97-D1C35C05B422}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

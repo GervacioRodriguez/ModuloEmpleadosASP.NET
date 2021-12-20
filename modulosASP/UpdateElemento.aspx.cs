@@ -22,8 +22,15 @@ namespace modulosASP
             SqlDataReader registro = buscar.ExecuteReader();
             if (registro.Read())
             {
+                var color = "#04B404";
+                var color1 = "#FF0000";
+                this.lb_nombre.ForeColor = System.Drawing.ColorTranslator.FromHtml(color1);
+                this.lb_NumElemento.ForeColor = System.Drawing.ColorTranslator.FromHtml(color1);
+                this.lb_servicio.ForeColor = System.Drawing.ColorTranslator.FromHtml(color);
+                this.lb_proyecto.ForeColor = System.Drawing.ColorTranslator.FromHtml(color);
+                this.lb_subproyecto.ForeColor = System.Drawing.ColorTranslator.FromHtml(color);
                 lb_NumElemento.Text = registro["num_empleado"].ToString();
-                lb_nombre.Text = registro["nombre"].ToString();
+                lb_nombre.Text = registro["Nombre"].ToString();
                 txtnombres.Text = registro["Nombre"].ToString();
                 txtApaterno.Text = registro["apaterno"].ToString();
                 txtAmaterno.Text = registro["amaterno"].ToString();
@@ -34,6 +41,9 @@ namespace modulosASP
                 txtproyecto.Text = registro["proyectoN"].ToString();
                 txtsubproyecto.Text = registro["subproyecton"].ToString();
                 txtservicio.Text = registro["servicioN"].ToString();
+                lb_proyecto.Text = registro["proyecto"].ToString();
+                lb_subproyecto.Text = registro["subproyecto"].ToString();
+                lb_servicio.Text = registro["servicio"].ToString();
             }
 
         }
@@ -88,10 +98,24 @@ namespace modulosASP
         {
             SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
             /*si el ususario le da click al radio button se activara las casilla para modificar al ejecutivo */
-            
-            SqlCommand command = new SqlCommand();
-            RbEjecutivo.Enabled = true;
+            //string actualizar_ejecutivo = "";
             
         }
+
+        protected void Actualizar_nombre_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
+            //string actualizar1 = "update "
+            SqlCommand command = new SqlCommand();
+        }
+
+        protected void Actulizar_fechas_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source = 192.168.11.75; Initial Catalog = Seic; Persist Security Info = True; User ID = sa; Password = Seicsa123");
+            string fecha = "update t_fechas set fecha_alta = '" + txtFecha_alta.Text + "',fecha_baja= '" + txtfecha_baja.Text + "' where num_empleado = '" + lb_NumElemento.Text + "'";
+            SqlCommand command = new SqlCommand(fecha, conn);
+            command.ExecuteNonQuery();
+        }
+
     }
 }

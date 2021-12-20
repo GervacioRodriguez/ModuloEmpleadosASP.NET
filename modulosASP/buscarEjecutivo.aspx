@@ -10,19 +10,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:LinkButton ID="lblink_home" runat="server" OnClick="lblink_home_Click">Inicio</asp:LinkButton>
+            <br />
+            <br />
+            <br />
             <asp:TextBox ID="txtNum_empleado" runat="server" Width="132px" AutoPostBack="True"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Buscar" Width="157px" />
             <br />
             Num Empleado:
             <br />
-            <asp:Label ID="LBTBusuarios" runat="server"></asp:Label>
+            <asp:Label ID="lbusuarios" runat="server"></asp:Label>
             <br />
-            Login:
+            Ejecutivo:
             <br />
             <asp:Label ID="LBLOGIN" runat="server"></asp:Label>
             <br />
-            <asp:Label ID="Label1" runat="server" Text="PassWord: "></asp:Label>
-            <br />
+            Numero de ejecutivo<br />
             <asp:Label ID="LBPASSWORD" runat="server"></asp:Label>
         </div>
     </form>

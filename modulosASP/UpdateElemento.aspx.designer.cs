@@ -69,6 +69,15 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtAmaterno;
 
         /// <summary>
+        /// Control Actualizar_nombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Actualizar_nombre;
+
+        /// <summary>
         /// Control txtFecha_alta.
         /// </summary>
         /// <remarks>
@@ -87,6 +96,24 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtfecha_baja;
 
         /// <summary>
+        /// Control Actulizar_fechas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Actulizar_fechas;
+
+        /// <summary>
+        /// Control lb_proyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_proyecto;
+
+        /// <summary>
         /// Control txtproyecto.
         /// </summary>
         /// <remarks>
@@ -96,6 +123,15 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.TextBox txtproyecto;
 
         /// <summary>
+        /// Control lb_subproyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_subproyecto;
+
+        /// <summary>
         /// Control txtsubproyecto.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace modulosASP
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsubproyecto;
+
+        /// <summary>
+        /// Control lb_servicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_servicio;
 
         /// <summary>
         /// Control txtservicio.

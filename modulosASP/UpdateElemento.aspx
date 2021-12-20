@@ -33,6 +33,9 @@
             Apellido Materno:<asp:TextBox ID="txtAmaterno" runat="server" Width="189px"></asp:TextBox>
             <br />
             <br />
+            <asp:Button ID="Actualizar_nombre" runat="server" OnClick="Actualizar_nombre_Click" Text="Actualizar nombre" />
+            <br />
+            <br />
             Fecha de alta<br />
             <asp:TextBox ID="txtFecha_alta" runat="server" Width="192px"></asp:TextBox>
             <br />
@@ -41,15 +44,25 @@
             <asp:TextBox ID="txtfecha_baja" runat="server" Width="192px"></asp:TextBox>
             <br />
             <br />
-            Proyecto
+            <br />
+            <asp:Button ID="Actulizar_fechas" runat="server" OnClick="Actulizar_fechas_Click" Text="Actualizar fechas" />
+            <br />
+            <br />
+            Proyecto&nbsp;&nbsp;
+            <asp:Label ID="lb_proyecto" runat="server" BorderStyle="None"></asp:Label>
+&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtproyecto" runat="server" Width="281px"></asp:TextBox>
             <br />
             <br />
-            sub-proyecto:
+            sub-proyecto:&nbsp;
+            <asp:Label ID="lb_subproyecto" runat="server"></asp:Label>
+            :&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtsubproyecto" runat="server" Width="436px"></asp:TextBox>
             <br />
             <br />
-            Servicio
+            Servicio&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lb_servicio" runat="server"></asp:Label>
+            :&nbsp;&nbsp;
             <asp:TextBox ID="txtservicio" runat="server" Width="470px"></asp:TextBox>
             <br />
             <br />

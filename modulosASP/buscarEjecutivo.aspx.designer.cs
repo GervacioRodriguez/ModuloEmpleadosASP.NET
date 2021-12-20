@@ -24,6 +24,15 @@ namespace modulosASP
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control lblink_home.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lblink_home;
+
+        /// <summary>
         /// Control txtNum_empleado.
         /// </summary>
         /// <remarks>
@@ -42,13 +51,13 @@ namespace modulosASP
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Control LBTBusuarios.
+        /// Control lbusuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LBTBusuarios;
+        protected global::System.Web.UI.WebControls.Label lbusuarios;
 
         /// <summary>
         /// Control LBLOGIN.
@@ -58,15 +67,6 @@ namespace modulosASP
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLOGIN;
-
-        /// <summary>
-        /// Control Label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// Control LBPASSWORD.
