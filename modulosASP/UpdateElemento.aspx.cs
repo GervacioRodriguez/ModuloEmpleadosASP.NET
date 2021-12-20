@@ -117,5 +117,11 @@ namespace modulosASP
             command.ExecuteNonQuery();
         }
 
+        protected void DPproyecto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //--- Show results in page.
+            Response.Write("Selected Text is " + DPproyecto + " and selected value is :" + DPproyecto);
+
+        }
     }
 }

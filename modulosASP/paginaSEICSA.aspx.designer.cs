@@ -11,7 +11,7 @@ namespace modulosASP
 {
 
 
-    public partial class menu_vertical
+    public partial class paginaSEICSA
     {
     }
 }
