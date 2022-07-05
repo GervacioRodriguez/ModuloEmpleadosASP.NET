@@ -14,7 +14,7 @@ namespace modulosASP
         //public ConnectionState 
         public void conn()
         {
-            string queryConectar = "Data Source=192.168.11.75;Initial Catalog=Seic;Persist Security Info=True;User ID=sa;Password=Seicsa123";
+            string queryConectar = "Data Source=DESKTOP-DVRD5GT\\SQLEXPRESS01;Initial Catalog=aspempleado;Integrated Security=True";
             SqlConnection conectar = new SqlConnection(queryConectar);
             conectar.Open();
    

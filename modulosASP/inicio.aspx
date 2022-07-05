@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="paginaSEICSA.aspx.cs" Inherits="modulosASP.paginaSEICSA" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inicio.aspx.cs" Inherits="modulosASP.paginaSEICSA" %>
 
 <!DOCTYPE html>
 

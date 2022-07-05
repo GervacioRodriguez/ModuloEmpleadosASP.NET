@@ -67,42 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actualizar_ejecutivo_y_elementos.aspx" />
-    <Content Include="AdministracionVacantes.aspx" />
-    <Content Include="AgregarElemento.aspx" />
-    <Content Include="Alta_de_nuevo_candidato.aspx" />
+    <Content Include="Alta_de_nuevo_candidato.aspx">
+      <BrowseToURL>Alta_de_nuevo_candidato.aspx</BrowseToURL>
+    </Content>
     <Content Include="buscarEjecutivo.aspx" />
-    <Content Include="menuHorizontalREPORTES.aspx" />
     <Content Include="menu_vertical.aspx" />
     <Content Include="ModificarEstatusElemento.aspx" />
-    <Content Include="ModuloDenisse.aspx" />
-    <Content Include="paginaSEICSA.aspx" />
+    <Content Include="inicio.aspx" />
     <Content Include="Reclutamiento.aspx" />
-    <Content Include="UpdateElemento.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actualizar_ejecutivo_y_elementos.aspx.cs">
-      <DependentUpon>Actualizar_ejecutivo_y_elementos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Actualizar_ejecutivo_y_elementos.aspx.designer.cs">
-      <DependentUpon>Actualizar_ejecutivo_y_elementos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdministracionVacantes.aspx.cs">
-      <DependentUpon>AdministracionVacantes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdministracionVacantes.aspx.designer.cs">
-      <DependentUpon>AdministracionVacantes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarElemento.aspx.cs">
-      <DependentUpon>AgregarElemento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AgregarElemento.aspx.designer.cs">
-      <DependentUpon>AgregarElemento.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Alta_de_nuevo_candidato.aspx.cs">
       <DependentUpon>Alta_de_nuevo_candidato.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,13 +93,6 @@
       <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
     </Compile>
     <Compile Include="connDB.cs" />
-    <Compile Include="menuHorizontalREPORTES.aspx.cs">
-      <DependentUpon>menuHorizontalREPORTES.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="menuHorizontalREPORTES.aspx.designer.cs">
-      <DependentUpon>menuHorizontalREPORTES.aspx</DependentUpon>
-    </Compile>
     <Compile Include="menu_vertical.aspx.cs">
       <DependentUpon>menu_vertical.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,20 +107,13 @@
     <Compile Include="ModificarEstatusElemento.aspx.designer.cs">
       <DependentUpon>ModificarEstatusElemento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ModuloDenisse.aspx.cs">
-      <DependentUpon>ModuloDenisse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModuloDenisse.aspx.designer.cs">
-      <DependentUpon>ModuloDenisse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="operacion.cs" />
-    <Compile Include="paginaSEICSA.aspx.cs">
-      <DependentUpon>paginaSEICSA.aspx</DependentUpon>
+    <Compile Include="inicio.aspx.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="paginaSEICSA.aspx.designer.cs">
-      <DependentUpon>paginaSEICSA.aspx</DependentUpon>
+    <Compile Include="inicio.aspx.designer.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reclutamiento.aspx.cs">
@@ -161,13 +122,6 @@
     </Compile>
     <Compile Include="Reclutamiento.aspx.designer.cs">
       <DependentUpon>Reclutamiento.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateElemento.aspx.cs">
-      <DependentUpon>UpdateElemento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UpdateElemento.aspx.designer.cs">
-      <DependentUpon>UpdateElemento.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

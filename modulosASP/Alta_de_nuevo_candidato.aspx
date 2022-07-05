@@ -9,8 +9,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        Ingrese nuevo empleado<br />
+        <br />
+        Nombre(s):
+        <asp:TextBox ID="TextBox1" runat="server" Width="212px"></asp:TextBox>
+        <br />
+        Apellido Paterno
+        <asp:TextBox ID="TextBox2" runat="server" Width="181px"></asp:TextBox>
+        <br />
+        Apellido Materno<asp:TextBox ID="TextBox3" runat="server" Width="176px"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Guardar" />
     </form>
 </body>
 </html>
