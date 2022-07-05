@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Alta_de_nuevo_candidato.aspx.cs" Inherits="modulosASP.Alta_de_nuevo_candidato" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Alta_de_empleados.aspx.cs" Inherits="modulosASP.Alta_de_nuevo_candidato" %>
 
 <!DOCTYPE html>
 

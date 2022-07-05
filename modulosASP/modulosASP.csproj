@@ -67,8 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Alta_de_nuevo_candidato.aspx">
-      <BrowseToURL>Alta_de_nuevo_candidato.aspx</BrowseToURL>
+    <Content Include="Alta_de_empleados.aspx">
+      <BrowseToURL>Alta_de_empleados.aspx</BrowseToURL>
     </Content>
     <Content Include="buscarEjecutivo.aspx" />
     <Content Include="menu_vertical.aspx" />
@@ -78,12 +78,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alta_de_nuevo_candidato.aspx.cs">
-      <DependentUpon>Alta_de_nuevo_candidato.aspx</DependentUpon>
+    <Compile Include="Alta_de_empleados.aspx.cs">
+      <DependentUpon>Alta_de_empleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alta_de_nuevo_candidato.aspx.designer.cs">
-      <DependentUpon>Alta_de_nuevo_candidato.aspx</DependentUpon>
+    <Compile Include="Alta_de_empleados.aspx.designer.cs">
+      <DependentUpon>Alta_de_empleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="buscarEjecutivo.aspx.cs">
       <DependentUpon>buscarEjecutivo.aspx</DependentUpon>
