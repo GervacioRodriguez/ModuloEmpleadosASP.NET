@@ -1,0 +1,14 @@
+﻿select * from empleado
+
+
+
+
+
+
+
+
+
+
+
+
+
