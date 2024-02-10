@@ -5,24 +5,6 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modulosASP", "modulosASP\modulosASP.csproj", "{351EE1E3-B1B2-4337-99D6-6FAC67090821}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{A2CA9A79-F4A6-4F46-8089-823D3FAC3BE4}"
-	ProjectSection(SolutionItems) = preProject
-		alertas_usuarios.js = alertas_usuarios.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "estilos", "estilos", "{8201302F-A8F2-43F8-896D-5B275B525F9E}"
-	ProjectSection(SolutionItems) = preProject
-		Style.css = Style.css
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBCNN", "DBCNN", "{C62D8607-24C5-44A3-AA28-E6AB69CF22B8}"
-	ProjectSection(SolutionItems) = preProject
-		modulosASP\connDB.cs = modulosASP\connDB.cs
-		modulosASP\operacion.cs = modulosASP\operacion.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "reportes", "reportes", "{E2E0F56B-FE0E-4FB2-AA97-D1C35C05B422}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
