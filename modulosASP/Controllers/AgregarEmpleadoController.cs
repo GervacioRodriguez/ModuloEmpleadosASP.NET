@@ -13,5 +13,15 @@ namespace modulosASP.Controllers
         {
             return View();
         }
+
+        public ActionResult Agregarempleado()
+        {
+            return View();
+        }
+
+        public ActionResult Notaempleado()
+        {
+            return View();
+        }
     }
 }
