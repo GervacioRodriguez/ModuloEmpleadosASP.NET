@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1e3de370fcf143be9ccbcbce863ccb1a" Name="Diagram1">
+        <EntityTypeShape EntityType="SEICModel.C_Area" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Banco" Width="1.5" PointX="5.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Celulares" Width="1.5" PointX="2.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Credito" Width="1.5" PointX="4.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Dias" Width="1.5" PointX="6.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Documentos" Width="1.5" PointX="7.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Edificio" Width="1.5" PointX="8.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Ejecutivo" Width="1.5" PointX="9.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_EjecutivoE" Width="1.5" PointX="4.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Empresa" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Equipo" Width="1.5" PointX="10.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Estado" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Estatus" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Estudios" Width="1.5" PointX="10.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Jornada" Width="1.5" PointX="6.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Modalidad" Width="1.5" PointX="8.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Modulos" Width="1.5" PointX="10.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Motivos_B" Width="1.5" PointX="11.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Municipios" Width="1.5" PointX="8" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_NOMINAS" Width="1.5" PointX="2.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Pais" Width="1.5" PointX="12.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Procesos" Width="1.5" PointX="12.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Proyecto" Width="1.5" PointX="12.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_ProyectoN" Width="1.5" PointX="10.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Puesto" Width="1.5" PointX="12.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Rechazos_B" Width="1.5" PointX="13.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Servicio" Width="1.5" PointX="4.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_ServicioA" Width="1.5" PointX="6.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_SIM" Width="1.5" PointX="14.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_SubProyecto" Width="1.5" PointX="14.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Tipo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_TipoNomi" Width="1.5" PointX="14.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_Turno" Width="1.5" PointX="14.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.Cat_Unidad" Width="1.5" PointX="15.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.R_Edi_Emp" Width="1.5" PointX="8.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Alta_imss" Width="1.5" PointX="16.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Asistencias" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Asistenciasb" Width="1.5" PointX="16.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_CExpediente" Width="1.5" PointX="16.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Cimss" Width="1.5" PointX="2.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Cip" Width="1.5" PointX="17.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_ClaveInterB" Width="1.5" PointX="12.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Comen_Inb" Width="1.5" PointX="18.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Cuip" Width="1.5" PointX="18.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Curp" Width="1.5" PointX="8.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_DatosBan" Width="1.5" PointX="18.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_DatosPersonales" Width="1.5" PointX="18.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Dias" Width="1.5" PointX="18.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Direccion" Width="1.5" PointX="14.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_DireccionO" Width="1.5" PointX="19.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Eestudios" Width="1.5" PointX="20.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_EF" Width="1.5" PointX="20.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Ejecutivo" Width="1.5" PointX="20.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Emp_Cre" Width="1.5" PointX="10.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Empleado" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_EquipoAsignado" Width="1.5" PointX="20.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Expediente" Width="1.5" PointX="20.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FActa" Width="1.5" PointX="16.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FAnteLab" Width="1.5" PointX="20.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FAntePen" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FAtec" Width="1.5" PointX="2.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Fatigas_Inb" Width="1.5" PointX="4.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FCartilla" Width="1.5" PointX="21.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_Fcedula" Width="1.5" PointX="6.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FCertificado" Width="1.5" PointX="18.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FCip" Width="1.5" PointX="20.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_Fcontrato" Width="1.5" PointX="22.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FCurp" Width="1.5" PointX="22.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FDomicilio" Width="1.5" PointX="22.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FE" Width="1.5" PointX="22.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Fechas" Width="1.5" PointX="22.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FEstudios" Width="1.5" PointX="23.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FExam" Width="1.5" PointX="8.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_FExpediente" Width="1.5" PointX="10.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Fimss" Width="1.5" PointX="12.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FimssA" Width="1.5" PointX="14.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_FIne" Width="1.5" PointX="24.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Foto" Width="1.5" PointX="0.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_Frfc" Width="1.5" PointX="24.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_HE" Width="1.5" PointX="24.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_HistoriaSA" Width="1.5" PointX="16.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Horario" Width="1.5" PointX="24.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_IdAsistencia" Width="1.5" PointX="18.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Jornada" Width="1.5" PointX="24.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_M_Estatus" Width="1.5" PointX="24.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Matricula" Width="1.5" PointX="2.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Modalidad" Width="1.5" PointX="25.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_ModeloA" Width="1.5" PointX="4.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_NN" Width="1.5" PointX="20.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Nss" Width="1.5" PointX="26.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_PagosExt" Width="1.5" PointX="26.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Privilegios" Width="1.5" PointX="6.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Proyecto" Width="1.5" PointX="8.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_ProyEje" Width="1.5" PointX="26.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_ProyEje_En" Width="1.5" PointX="10.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Rfc" Width="1.5" PointX="12.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Servicio" Width="1.5" PointX="26.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_SubProyecto" Width="1.5" PointX="26.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Sueldo" Width="1.5" PointX="26.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Telefono" Width="1.5" PointX="26.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_TipoNomina" Width="1.5" PointX="26.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Tramites" Width="1.5" PointX="14.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Turno" Width="1.5" PointX="27.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.Tb_Log" Width="1.5" PointX="16.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.Tb_Solicitudes" Width="1.5" PointX="0.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.Tb_Usuarios" Width="1.5" PointX="2.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.Tb_Usuarios_I" Width="1.5" PointX="28.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_ServicioA_RES" Width="1.5" PointX="28.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.C_ServicioAR" Width="1.5" PointX="18.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.R_Cel_Sim_Emp" Width="1.5" PointX="28.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.t_reclutamiento" Width="1.5" PointX="28.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.T_Vacaciones" Width="1.5" PointX="20.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.tb_empleados_reclutados" Width="1.5" PointX="22.75" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEICModel.TB_usuarios_portal" Width="1.5" PointX="24.75" PointY="29.875" IsExpanded="true" />
+        <AssociationConnector Association="SEICModel.FK_T_Empleado_C_Area" ManuallyRouted="false" />
+        <AssociationConnector Association="SEICModel.FK_T_Empleado_C_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SEICModel.FK_C_Municipios_C_Municipios" ManuallyRouted="false" />
+        <AssociationConnector Association="SEICModel.FK_T_Empleado_C_Tipo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

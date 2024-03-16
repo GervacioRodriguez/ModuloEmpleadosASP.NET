@@ -64,6 +64,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +127,16 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Models\EFConn\DBconn.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBconn.edmx</DependentUpon>
+      <LastGenOutput>DBconn.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EFConn\DBconn.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBconn.edmx</DependentUpon>
+      <LastGenOutput>DBconn.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -152,6 +165,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\EFConn\DBconn.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBconn.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EFConn\DBconn.edmx.diagram">
+      <DependentUpon>DBconn.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -169,6 +189,366 @@
     <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\Cat_Unidad.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Area.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Banco.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Celulares.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Credito.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Dias.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Documentos.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Edificio.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Ejecutivo.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_EjecutivoE.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Empresa.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Equipo.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Estado.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Estatus.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Estudios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Jornada.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Modalidad.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Modulos.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Motivos_B.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Municipios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_NOMINAS.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Pais.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Procesos.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Proyecto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_ProyectoN.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Puesto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Rechazos_B.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Servicio.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_ServicioA.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_ServicioAR.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_ServicioA_RES.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_SIM.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_SubProyecto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Tipo.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_TipoNomi.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\C_Turno.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\DBconn.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBconn.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\DBconn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\DBconn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBconn.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\R_Cel_Sim_Emp.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\R_Edi_Emp.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\sysdiagrams.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\tb_empleados_reclutados.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\Tb_Log.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\Tb_Solicitudes.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\Tb_Usuarios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\Tb_Usuarios_I.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\TB_usuarios_portal.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Alta_imss.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Asistencias.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Asistenciasb.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_CExpediente.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Cimss.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Cip.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_ClaveInterB.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Comen_Inb.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Cuip.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Curp.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_DatosBan.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_DatosPersonales.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Dias.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Direccion.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_DireccionO.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Eestudios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_EF.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Ejecutivo.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Empleado.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Emp_Cre.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_EquipoAsignado.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Expediente.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FActa.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FAnteLab.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FAntePen.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FAtec.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Fatigas_Inb.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FCartilla.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_Fcedula.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FCertificado.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FCip.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_Fcontrato.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FCurp.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FDomicilio.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FE.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Fechas.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FEstudios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FExam.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_FExpediente.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Fimss.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FimssA.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_FIne.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Foto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_Frfc.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_HE.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_HistoriaSA.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Horario.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_IdAsistencia.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Jornada.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Matricula.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Modalidad.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_ModeloA.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_M_Estatus.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_NN.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Nss.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_PagosExt.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Privilegios.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Proyecto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_ProyEje.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_ProyEje_En.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_reclutamiento.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Rfc.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Servicio.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_SubProyecto.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Sueldo.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Telefono.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\t_TipoNomina.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Tramites.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Turno.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFConn\T_Vacaciones.cs">
+      <DependentUpon>DBconn.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -189,10 +569,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\EFConn\" />
+    <Folder Include="Models\DTO\" />
     <Folder Include="Views\Ejecutivos\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Servicios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
