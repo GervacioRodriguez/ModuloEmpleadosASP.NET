@@ -139,6 +139,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
+    <Folder Include="Models\EFConn\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
