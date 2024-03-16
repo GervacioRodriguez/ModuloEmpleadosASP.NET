@@ -17,11 +17,8 @@ namespace modulosASP.Controllers
 
         public ActionResult Agregarempleado()
         {
-            List<T_Empleado> Em = new List<T_Empleado>();
-            using ( )
-            {
-
-            }
+            List<DTO.T_Empleado> Em = new List<DTO.T_Empleado>();
+            
                 return View();
         }
 
