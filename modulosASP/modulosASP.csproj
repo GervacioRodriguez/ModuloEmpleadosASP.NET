@@ -164,7 +164,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgregarEmpleadoController.cs" />
+    <Compile Include="Controllers\EjecutivosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,7 +192,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\EFConn\" />
+    <Folder Include="Views\Ejecutivos\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\Servicios\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
