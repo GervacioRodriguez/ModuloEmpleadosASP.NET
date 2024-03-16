@@ -4,6 +4,7 @@ using modulosASP.Models.EFConn;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Helpers;
 
 namespace modulosASP.Controllers
 {
@@ -18,8 +19,18 @@ namespace modulosASP.Controllers
         public ActionResult Agregarempleado()
         {
             List<DTO.T_Empleado> Em = new List<DTO.T_Empleado>();
-            
-                return View();
+            using (SEICEntities db = new SEICEntities())
+            {
+                Em = (
+                    from ep in db.T_Empleado
+                    select new DTO.T_Empleado
+                    {
+                        Empresa = ep.Empresa,
+                        Nombres = ep.Nombres
+                    }).ToList();
+            }
+            return View(Em);
+                //Json (Em);
         }
 
         public ActionResult Notaempleado()
