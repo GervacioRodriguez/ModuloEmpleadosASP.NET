@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modulosASP", "modulosASP\modulosASP.csproj", "{351EE1E3-B1B2-4337-99D6-6FAC67090821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conexion", "Conexion\Conexion.csproj", "{8A64F6EF-06C6-47BD-B45A-CE1D75ED8A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{351EE1E3-B1B2-4337-99D6-6FAC67090821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351EE1E3-B1B2-4337-99D6-6FAC67090821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351EE1E3-B1B2-4337-99D6-6FAC67090821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A64F6EF-06C6-47BD-B45A-CE1D75ED8A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A64F6EF-06C6-47BD-B45A-CE1D75ED8A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A64F6EF-06C6-47BD-B45A-CE1D75ED8A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A64F6EF-06C6-47BD-B45A-CE1D75ED8A3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
