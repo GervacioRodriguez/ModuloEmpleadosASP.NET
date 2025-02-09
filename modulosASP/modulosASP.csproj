@@ -299,7 +299,6 @@
     <Compile Include="Models\C_Turno.cs">
       <DependentUpon>ModelSeg.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\Proyecto.cs" />
     <Compile Include="DTO\EmpleadoDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -570,6 +569,7 @@
     <Content Include="Views\Empleado\Empleados.cshtml" />
     <Content Include="Views\Proyecto\Proyectos.cshtml" />
     <Content Include="Views\Ejecutivos\Ejecutivos.cshtml" />
+    <Content Include="Views\Proyecto\AgregarProyecto.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

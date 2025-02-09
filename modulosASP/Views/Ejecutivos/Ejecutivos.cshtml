@@ -1,4 +1,5 @@
-﻿
+﻿@using modulosASP.DTO;
+@model List<EjecutivoDto>
 @{
     ViewBag.Title = "Ejecutivos";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,7 +9,29 @@
 
 <div class="card">
     <div class="card-body">
-        <table class="table table-bordered table-hover" id="tb_empleado">
+        <table class="table table-bordered table-hover" id="tb_ejecutivo">
+            <thead>
+                <tr>
+                    <td>@Html.DisplayNameFor(Model => Model.First().Num_Empleado)</td>
+                    <td>@Html.DisplayNameFor(Model => Model.First().Nombre)</td>
+                    <td>@Html.DisplayNameFor(Model => Model.First().Correo)</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var datos in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(Model => datos.Num_Empleado)</td>
+                        <td>@Html.DisplayFor(Model => datos.Nombre)</td>
+                        <td>@Html.DisplayFor(Model => datos.Correo)</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-warning">Editar Ejecutivo</button>
+                            -
+                            <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
         </table>
     </div>

@@ -21,14 +21,28 @@ namespace modulosASP.Controllers
                 listaproyectos = (from pr in db.C_Proyecto
                                   select new ProyectoDTO
                                   {
-                                  
+
                                       Proyecto = pr.Proyecto,
                                       Tipo = pr.Tipo
-                                  
+
                                   }).ToList();
             }
 
-                return View(listaproyectos);
+            return View(listaproyectos);
         }
+
+        public ActionResult AgregarProyecto()
+        {
+
+            return View();
+
+        }
+
+        //[HttpPost]
+        //public ActionResult AgregarProyecto()
+        //{
+
+        //    return View();
+        //}
     }
 }
