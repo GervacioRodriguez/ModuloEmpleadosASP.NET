@@ -186,7 +186,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\ServiciosController.cs" />
+    <Compile Include="DTO\ProyectoDTO.cs" />
     <Compile Include="Models\Cat_Unidad.cs">
       <DependentUpon>ModelSeg.tt</DependentUpon>
     </Compile>
@@ -573,7 +575,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Lib\" />
     <Folder Include="Views\Ejecutivos\" />
+    <Folder Include="Views\Proyecto\" />
     <Folder Include="Views\Servicios\" />
   </ItemGroup>
   <ItemGroup>

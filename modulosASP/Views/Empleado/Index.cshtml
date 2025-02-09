@@ -5,31 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Empleados</h2>
 
-<table class="table table-bordered table-hover" id="tb_empleado">
-    <thead>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.First().Num_Empleado)</td>
-            <td>@Html.DisplayNameFor(model => model.First().APaterno)</td>
-            <td>@Html.DisplayNameFor(model => model.First().AMaterno)</td>
-            <td>@Html.DisplayNameFor(model => model.First().Nombres)</td>
-            <td>Acciones A ejecutar</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var item in Model)
-            {
+<div class="card">
+    <div class="card-body">
+        <table class="table table-bordered table-hover" id="tb_empleado">
+            <thead>
                 <tr>
-                    <td>@Html.DisplayFor(model => item.Num_Empleado)</td>
-                    <td>@Html.DisplayFor(model => item.APaterno)</td>
-                    <td>@Html.DisplayFor(model => item.AMaterno)</td>
-                    <td>@Html.DisplayFor(model => item.Nombres)</td>
-                    <td>
-                        <button class="btn btn-outline-warning">Editar Elemento</button> / 
-                        <button class="btn btn-outline-danger">Dar de Baja</button>
-                    </td>
+                    <td>@Html.DisplayNameFor(model => model.First().Num_Empleado)</td>
+                    <td>@Html.DisplayNameFor(model => model.First().APaterno)</td>
+                    <td>@Html.DisplayNameFor(model => model.First().AMaterno)</td>
+                    <td>@Html.DisplayNameFor(model => model.First().Nombres)</td>
+                    <td>Acciones A ejecutar</td>
                 </tr>
-            }
-    </tbody>
-</table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => item.Num_Empleado)</td>
+                        <td>@Html.DisplayFor(model => item.APaterno)</td>
+                        <td>@Html.DisplayFor(model => item.AMaterno)</td>
+                        <td>@Html.DisplayFor(model => item.Nombres)</td>
+                        <td>
+                            <button class="btn btn-outline-warning">Editar Elemento</button> -
+                            <button class="btn btn-outline-danger">Dar de Baja</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
