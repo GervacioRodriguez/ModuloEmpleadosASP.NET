@@ -11,7 +11,7 @@ namespace modulosASP.Controllers
     public class ProyectoController : Controller
     {
         // GET: Proyecto
-        public ActionResult Index()
+        public ActionResult Proyectos()
         {
             //generamos la lista de datos a imprimir
             List<ProyectoDTO> listaproyectos = null;
@@ -21,11 +21,10 @@ namespace modulosASP.Controllers
                 listaproyectos = (from pr in db.C_Proyecto
                                   select new ProyectoDTO
                                   {
-                                      Id = pr.Id,
+                                  
                                       Proyecto = pr.Proyecto,
-                                      Tipo = pr.Tipo,
-                                      Clave = pr.Clave,
-                                      Vigente = pr.Vigente
+                                      Tipo = pr.Tipo
+                                  
                                   }).ToList();
             }
 

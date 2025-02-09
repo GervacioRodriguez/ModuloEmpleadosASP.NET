@@ -184,10 +184,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EjecutivosController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\ServiciosController.cs" />
+    <Compile Include="DTO\EjecutivoDto.cs" />
     <Compile Include="DTO\ProyectoDTO.cs" />
     <Compile Include="Models\Cat_Unidad.cs">
       <DependentUpon>ModelSeg.tt</DependentUpon>
@@ -565,7 +567,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Empleado\Index.cshtml" />
+    <Content Include="Views\Empleado\Empleados.cshtml" />
+    <Content Include="Views\Proyecto\Proyectos.cshtml" />
+    <Content Include="Views\Ejecutivos\Ejecutivos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -576,8 +580,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Lib\" />
-    <Folder Include="Views\Ejecutivos\" />
-    <Folder Include="Views\Proyecto\" />
     <Folder Include="Views\Servicios\" />
   </ItemGroup>
   <ItemGroup>

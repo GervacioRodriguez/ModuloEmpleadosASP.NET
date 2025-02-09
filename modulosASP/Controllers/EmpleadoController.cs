@@ -13,7 +13,7 @@ namespace modulosASP.Controllers
     public class EmpleadoController : Controller
     {
         // GET: AgregarEmpleado
-        public ActionResult Index()
+        public ActionResult Empleados()
         { 
             List<EmpleadoDTO> listaempleado = null;
             using (var db = new SEICEntities())
