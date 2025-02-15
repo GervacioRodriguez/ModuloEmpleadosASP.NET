@@ -11,8 +11,12 @@ namespace modulosASP.DTO
         [Key]
         public int Id { get; set; }
         [Display(Name ="Nombre Del Proyecto")]
+        [Required] //este campo es obligatorio
+        [StringLength(100,ErrorMessage ="Longitud max 100")]
         public string Proyecto { get; set; }
         [Display(Name = "Tipo de Proyecto")]
+        [Required]
+        [StringLength(100,ErrorMessage ="longitud max 10")]
         public string Tipo { get; set; }
         [Display(Name ="Clave Del Proyecto")]
         public string Clave { get; set; }

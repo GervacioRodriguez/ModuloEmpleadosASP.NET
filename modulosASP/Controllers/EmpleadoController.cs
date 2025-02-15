@@ -31,15 +31,13 @@ namespace modulosASP.Controllers
                 return View(listaempleado);
         }
 
-        public ActionResult Agregarempleado()
+        public ActionResult EditarEmpleado()
         {
-          
-            List<EmpleadoDTO> ListaEmpleados = new List<EmpleadoDTO>();
+
             return View();
-                //Json (Em);
         }
 
-        public ActionResult Notaempleado()
+       public ActionResult Notaempleado()
         {
             return View();
         }

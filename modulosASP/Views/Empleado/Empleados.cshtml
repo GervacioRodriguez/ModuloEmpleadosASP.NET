@@ -28,12 +28,17 @@
                         <td>@Html.DisplayFor(model => item.AMaterno)</td>
                         <td>@Html.DisplayFor(model => item.Nombres)</td>
                         <td>
-                            <button class="btn btn-outline-warning">Editar Elemento</button> -
-                            <button class="btn btn-outline-danger">Dar de Baja</button>
+                            @Html.ActionLink("Editar Elemento ", "EditarEmpleado", "Empleado", new { idEmpleado = item.Num_Empleado }, new { @class = "<i class='bi bi - pencil - square' ></i> btn btn-primary" })
+                            @Html.ActionLink("Eliminar Elemento ", "EditarEmpleado", "Empleado", new { idEmpleado = item.Num_Empleado }, new { @class = "<i class='bi bi - pencil - square' ></i> btn btn-danger" })
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
-</div>
+</div><!-- Inicializar DataTables -->
+<script>
+    $(document).ready(function () {
+        $('#tb_empleado').DataTable({});
+    });
+</script>

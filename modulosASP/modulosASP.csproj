@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="DTO\EjecutivoDto.cs" />
     <Compile Include="DTO\ProyectoDTO.cs" />
+    <Compile Include="Funciones\FuncionClaveProyecto.cs" />
     <Compile Include="Models\Cat_Unidad.cs">
       <DependentUpon>ModelSeg.tt</DependentUpon>
     </Compile>
@@ -570,6 +571,7 @@
     <Content Include="Views\Proyecto\Proyectos.cshtml" />
     <Content Include="Views\Ejecutivos\Ejecutivos.cshtml" />
     <Content Include="Views\Proyecto\AgregarProyecto.cshtml" />
+    <Content Include="Views\Empleado\EditarEmpleado.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- Agregar los archivos de DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
 
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -45,20 +48,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-
-    
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
-
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    if ($('#tb_empleado').length) {
-                        $('#tb_empleado').DataTable();
-                    }
-                });
-            </script>
-    
-
 
 </body>
 </html>
