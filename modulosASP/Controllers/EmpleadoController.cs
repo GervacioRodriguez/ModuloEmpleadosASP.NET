@@ -18,23 +18,28 @@ namespace modulosASP.Controllers
             List<EmpleadoDTO> listaempleado = null;
             using (var db = new SEICEntities())
             {
-                 listaempleado = (from ep in db.T_Empleado
-                                                   select new EmpleadoDTO
-                                                   {
-                                                       Num_Empleado = ep.Num_Empleado,
-                                                       APaterno = ep.APaterno,
-                                                       AMaterno = ep.AMaterno,
-                                                       Nombres = ep.Nombres
-                                               
-                                                   }).ToList();
+                listaempleado = (from ep in db.T_Empleado
+                                 select new EmpleadoDTO
+                                 {
+                                     Num_Empleado = ep.Num_Empleado,
+                                     APaterno = ep.APaterno,
+                                     AMaterno = ep.AMaterno,
+                                     Nombres = ep.Nombres
+
+                                 }).Take(100).ToList();
             }
                 return View(listaempleado);
         }
 
-        public ActionResult EditarEmpleado()
+        public ActionResult EditarEmpleado(string idEmpleado)
         {
+            List<EmpleadoDTO> empleadoDTOs = null;
 
-            return View();
+            using (var db = new SEICEntities())
+            {
+                empleadoDTOs = db.T_Empleado.Where(p => p.Num_Empleado.Equals(idEmpleado)).First();
+            }
+                return View();
         }
 
        public ActionResult Notaempleado()
