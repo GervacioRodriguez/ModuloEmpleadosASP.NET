@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using modulosASP.DTO;
 using modulosASP.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.Helpers;
-using System.Web.WebPages.Html;
+
 
 namespace modulosASP.Controllers
 {
@@ -37,7 +34,7 @@ namespace modulosASP.Controllers
 
             using (var db = new SEICEntities())
             {
-                empleadoDTOs = db.T_Empleado.Where(p => p.Num_Empleado.Equals(idEmpleado)).First();
+                //empleadoDTOs = db.T_Empleado.Where(p => p.Num_Empleado.Equals(idEmpleado)).First();
             }
                 return View();
         }
