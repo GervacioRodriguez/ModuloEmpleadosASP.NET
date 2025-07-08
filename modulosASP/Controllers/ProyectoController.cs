@@ -9,6 +9,18 @@ namespace modulosASP.Controllers
 {
     public class ProyectoController : Controller
     {
+        public ActionResult EditarId(ProyectoDTO proyecto)
+        {
+
+
+            return View();
+        }
+        public ActionResult EditarProyecto()
+        {
+
+            return View();
+        }
+
         // GET: Proyecto
         public ActionResult Proyectos()
         {
@@ -22,7 +34,8 @@ namespace modulosASP.Controllers
                                   {
 
                                       Proyecto = pr.Proyecto,
-                                      Tipo = pr.Tipo
+                                      Tipo = pr.Tipo,
+                                      Clave = pr.Clave
 
                                   }).ToList();
             }
