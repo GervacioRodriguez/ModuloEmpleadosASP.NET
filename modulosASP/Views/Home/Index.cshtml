@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@model List<modulosASP.DTO.ProyectoDTO>
 
 
 <h2>Estadistica de proyectos</h2>
@@ -14,8 +14,8 @@
         <div class="card h-100">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Proyectos</h5>
+                <div id="grafica"></div>
             </div>
             <div class="card-footer">
                 <small class="text-muted">Last updated 3 mins ago</small>
@@ -47,3 +47,37 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+
+        @*const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.Tipo)));
+        const series = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(m => m.Total)));*@
+
+
+        var options = {
+            series: series,
+            chart: {
+                width: 380,
+                type: 'pie',
+            },
+            labels:labels,
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#grafica"), options);
+        chart.render();
+    </script>
+}

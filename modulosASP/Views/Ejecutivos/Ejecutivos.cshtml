@@ -25,7 +25,14 @@
                         <td>@Html.DisplayFor(Model => datos.Nombre)</td>
                         <td>@Html.DisplayFor(Model => datos.Correo)</td>
                         <td>
-                            <button type="button" class="btn btn-outline-warning">Editar Ejecutivo</button>
+                            <button type="button" class="btn btn-outline-warning btnEditar"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"
+                                        data-num="@datos.Num_Empleado"
+                                    >
+                            
+                                Editar Ejecutivo
+                            </button>
                             -
                             <button type="button" class="btn btn-outline-danger">Eliminar</button>
                         </td>
@@ -37,7 +44,115 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
+                <div class="mb-3">
+                    <input type="text" id="NumEjecutivo" disabled/>
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control w-100" id="Nombre" />
+                </div>
+
+                <div class="mb-3">
+                    <input type="email" class="form-control w-100" id="email" />
+                </div>
+
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnguardar">Save changes</button>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+
+        //llamamos el jquery
+        $(document).ready(function () {
+            //guardar datos
+            $('#btnguardar').on('click', function () {
+
+                //generamos un arreglo
+                let registro = DatosGuardar();
+
+                console.log("Objeto que se enviará al servidor:", registro);
+
+                //llamamos la funcion de guardar datos en ajax
+
+                ActualizarDatos(registro);
+
+                function DatosGuardar() {
+                    let DatoRegistro = {
+                        Num_Empleado: $('#NumEjecutivo').val(),
+                        Nombre: $('#Nombre').val(),
+                        Correo: $('#email').val()
+                    };
+                    return DatoRegistro;
+                }
+
+                function ActualizarDatos(DatoRegistro) {
+                    $.ajax({
+                        type: 'PUT',
+                        url: '@Url.Action("ActualizarDatos", "Ejecutivos")',
+                        data: DatoRegistro,
+                        success: function () {
+                            alert("Exito al actualizar");
+                        }, error: function () {
+                            alert("No entra al ajax");
+                        }
+                    });//Fin del ajax
+
+                }//fin de la funcion Guardar
+
+            });//fin del evento click
+
+            $(".btnEditar").on("click", function () {
+
+    //Recuperamos los datos del empleado
+    let Numero_Empleado = $(this).data("num");
+    console.log(Numero_Empleado);
+
+    $.ajax({
+        url: '@Url.Action("BurcarEmpleado","Ejecutivos")',
+        type: 'POST',
+        data: {
+            NumEmpleado: Numero_Empleado
+        },
+        success: function (resp) {
+            if (resp.success) {
+                $("#exampleModalLabel").text("Elemento " + resp.data.Nombre);
+                $("#NumEjecutivo").val(resp.data.Num_Empleado);
+                $('#Nombre').val(resp.data.Nombre);
+                $("#email").val(resp.data.Correo)
+            
+            } else {
+                alert(resp.mensaje);
+            }
+        },
+        error: function () {
+            alert("Error en la petición AJAX");
+        }
+    }); // Fin del AJAX
+
+}); // Fin del click
+        });//fin del documento
+
+    </script>
+
+
+}
 
 
 

@@ -1,6 +1,6 @@
 ﻿@using modulosASP.DTO;
-@model ProyectoDTO 
-    @*se manda llmar al dto si se va imprimir datos es un list*@
+@model ProyectoDTO
+@*se manda llmar al dto si se va imprimir datos es un list*@
 @{
     ViewBag.Title = "AgregarProyecto";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,46 +11,94 @@
 <div class="row">
     <div class="col-sm-6 col-md-6">
 
-        @using (Html.BeginForm("AgregarProyecto", "Proyecto", FormMethod.Post))
+        @using (Html.BeginForm("AgregarProyecto", "Proyecto", FormMethod.Post, new { id = "projectoID" }))
         {
-        
-        <div class="card">
-            <div class="card-body">
-                <div class="mt-3">
-                    @Html.LabelFor(p => p.Proyecto)
-                    @Html.TextBoxFor(p => p.Proyecto, new { @class = "form-control" })
-                    @Html.ValidationMessage("Proyecto", new { @class = "text-danger" })
-                </div>
 
-                <div class="mt-3">
-                    @Html.LabelFor(p => p.Tipo)
-                    @Html.TextBoxFor(p => p.Tipo, new { @class = "form-control" })
-                    @Html.ValidationMessage("Tipo", new { @class = "text-danger" })
-                </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="mt-3">
+                        @Html.LabelFor(p => p.Proyecto)
+                        @Html.TextBoxFor(p => p.Proyecto, new { @class = "form-control" })
+                        @Html.ValidationMessage("Proyecto", new { @class = "text-danger" })
+                    </div>
 
-                <div class="mt-3">
-                    @Html.LabelFor(p => p.Vigente)
-                    @Html.TextBoxFor(p => p.Vigente, new { @class = "form-control" })
-                    @Html.ValidationMessage("Vigente", new { @class = "text-danger" })
-                </div>
+                    <div class="mt-3">
+                        @Html.LabelFor(p => p.Tipo)
+                        @Html.TextBoxFor(p => p.Tipo, new { @class = "form-control" })
+                        @Html.ValidationMessage("Tipo", new { @class = "text-danger" })
+                    </div>
 
-                <div class="mt-3">
-                    @Html.LabelFor(p => p.Clave)
-                    @Html.TextBoxFor(p => p.Clave, new { @class = "form-control" })
-                    @Html.ValidationMessage("Clave", new { @class = "text-danger" })
-                </div>
+                    <div class="mt-3">
+                        @Html.LabelFor(p => p.Vigente)
+                        @Html.TextBoxFor(p => p.Vigente, new { @class = "form-control" })
+                        @Html.ValidationMessage("Vigente", new { @class = "text-danger" })
+                    </div>
 
-                <div class="mt-3">
-                    <input type="submit" class="btn btn-primary" value="guardar" />
+                    <div class="mt-3">
+                        @Html.LabelFor(p => p.Clave)
+                        @Html.TextBoxFor(p => p.Clave, new { @class = "form-control" })
+                        @Html.ValidationMessage("Clave", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-primary" id="IDguardar">Guardar</button>
+                    </div>
                 </div>
             </div>
-        </div>
         }
     </div>
 </div>
 
 
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function recuperardatos(frmID) {
 
+                let registro = {};
+
+                $(`#${frmID} :input`).each(function () {
+
+                    let nombre = $(this).attr('name'); //toma los valores del atributo name
+                    let valor = $(this).val();
+
+                    if (nombre) {
+                        registro[nombre] = valor;
+                    }
+                });
+                return registro;
+            }
+
+            $('#IDguardar').click(function () {
+                let datos = recuperardatos('projectoID');
+                console.log(datos);
+                //mandamos al controlador
+
+                $.ajax({
+                    url: '@Url.Action("AgregarProyecto","Proyecto")',
+                    type: 'POST',
+                    data: datos,
+                    success: function (resp) {
+                        alert(resp.mensaje);
+                        if (resp.exito) {
+                            // recargar página o limpiar formulario
+                            $('#projectoID')[0].reset();
+                        }// Mensaje que devuelve el controlador
+                    },
+                    error: function () {
+                        alert("Error al guardar el proyecto");
+                    }
+                });
+
+            });
+
+
+        });//fin del document
+    </script>
+    
+
+
+    }
 
 
 

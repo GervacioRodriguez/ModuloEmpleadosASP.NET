@@ -3,17 +3,67 @@ using System.Linq;
 using System.Web.Mvc;
 using modulosASP.Models;
 using modulosASP.DTO;
-using modulosASP.Funciones;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using ActionResult = System.Web.Mvc.ActionResult;
+using HttpPostAttribute = System.Web.Mvc.HttpPostAttribute;
 
 namespace modulosASP.Controllers
 {
     public class ProyectoController : Controller
     {
-        public ActionResult EditarId(ProyectoDTO proyecto)
+
+        private List<SelectListItem> ObtenerTiposProyectos()
         {
+            return new List<SelectListItem>
+        {
+            new SelectListItem { Value = "PUBLICO",Text="PUBLICO"},
+            new SelectListItem { Value="PRIVADO",Text="PRIVADO"}
+
+        };
+        }
 
 
-            return View();
+       [HttpPost]
+        public ActionResult EditarId(string Clave,string Proyecto)
+        {
+    
+            try {
+                if (string.IsNullOrEmpty(Clave) || string.IsNullOrEmpty(Proyecto)) {
+
+                    return Json(new { success = false, menssage = "Comprobar que clave o proyecto no vengan vacios" });
+
+                }
+                else
+                {
+                    var db = new SEICEntities();
+         
+            //consulta
+            var IdData = db.C_Proyecto.FirstOrDefault(
+                m => m.Clave ==Clave && m.Proyecto == Proyecto
+                );
+
+            if (IdData==null)
+            {
+                return HttpNotFound();
+            }
+
+                    ProyectoDTO dto = new ProyectoDTO
+                    {
+                        Clave = IdData.Clave,
+                        Proyecto = IdData.Proyecto,
+                        Tipo = IdData.Tipo
+                    };
+
+                    ViewBag.TiposProyectos = ObtenerTiposProyectos();
+            return View(IdData);
+          
+            }
+            }catch(Exception ex)
+            {
+                return Json(new { success = false, menssage = "Comprobar que clave o proyecto no vengan vacios" });
+
+            }
         }
         public ActionResult EditarProyecto()
         {
@@ -64,7 +114,7 @@ namespace modulosASP.Controllers
                 //si es valido ponemos la misma marca
                 using (var db = new SEICEntities()) //AQUI LLAMAMOS LA CONEXION
                 { 
-                    C_Proyecto objProyecto = new C_Proyecto(); //Aqui llamamos al modelo de la entidad para guardar el dato
+                    var objProyecto = new C_Proyecto(); //Aqui llamamos al modelo de la entidad para guardar el dato
                     objProyecto.Proyecto = DtoProyecto.Proyecto;
                     objProyecto.Tipo = DtoProyecto.Tipo;
                     objProyecto.Vigente = DtoProyecto.Vigente;
@@ -74,8 +124,9 @@ namespace modulosASP.Controllers
                     db.SaveChanges();
                    
                  }
+                return Json(new { mensaje = "Proyecto guardado correctamente", exito = true });
             }
-            return View("Proyectos");
+            //return View("Proyectos");
         }
     }
 }
