@@ -16,7 +16,7 @@ namespace modulosASP.DTO
         public string Nombre { get; set; }
         [Display(Name ="Correo Electronico")]
         public string Correo { get; set; }
-        [Display(Name ="Numero de ejecutivo")]
+        [Display(Name ="Numero de Ejecutivo")]
         public string Num_Empleado { get; set; }
     }
 }

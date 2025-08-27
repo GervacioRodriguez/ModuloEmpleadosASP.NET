@@ -10,107 +10,110 @@ using modulosASP.Models;
 
 namespace modulosASP.Controllers
 {
-    public class ProyectoController : Controller
+    /*LLamar todos los datos en formato Json
+     * para asi poder revisar los datos que sean asincronos
+     */
+    public class ServicioController : Controller
     {
         private SEICEntities db = new SEICEntities();
 
-        // GET: Proyecto
+        // GET: Servicio
         public ActionResult Index()
         {
-            return View(db.C_Proyecto.ToList());
+            return View(db.C_Servicio.ToList());
         }
 
-        // GET: Proyecto/Details/5
+        // GET: Servicio/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            C_Proyecto c_Proyecto = db.C_Proyecto.Find(id);
-            if (c_Proyecto == null)
+            C_Servicio c_Servicio = db.C_Servicio.Find(id);
+            if (c_Servicio == null)
             {
                 return HttpNotFound();
             }
-            return View(c_Proyecto);
+            return View(c_Servicio);
         }
 
-        // GET: Proyecto/Create
+        // GET: Servicio/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Proyecto/Create
+        // POST: Servicio/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Proyecto,Tipo,Clave,Vigente")] C_Proyecto c_Proyecto)
+        public ActionResult Create([Bind(Include = "Id,Proyecto,Servicio,Subproyecto,Estado,Municipio,Vence")] C_Servicio c_Servicio)
         {
             if (ModelState.IsValid)
             {
-                db.C_Proyecto.Add(c_Proyecto);
+                db.C_Servicio.Add(c_Servicio);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(c_Proyecto);
+            return View(c_Servicio);
         }
 
-        // GET: Proyecto/Edit/5
+        // GET: Servicio/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            C_Proyecto c_Proyecto = db.C_Proyecto.Find(id);
-            if (c_Proyecto == null)
+            C_Servicio c_Servicio = db.C_Servicio.Find(id);
+            if (c_Servicio == null)
             {
                 return HttpNotFound();
             }
-            return View(c_Proyecto);
+            return View(c_Servicio);
         }
 
-        // POST: Proyecto/Edit/5
+        // POST: Servicio/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Proyecto,Tipo,Clave,Vigente")] C_Proyecto c_Proyecto)
+        public ActionResult Edit([Bind(Include = "Id,Proyecto,Servicio,Subproyecto,Estado,Municipio,Vence")] C_Servicio c_Servicio)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(c_Proyecto).State = EntityState.Modified;
+                db.Entry(c_Servicio).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(c_Proyecto);
+            return View(c_Servicio);
         }
 
-        // GET: Proyecto/Delete/5
+        // GET: Servicio/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            C_Proyecto c_Proyecto = db.C_Proyecto.Find(id);
-            if (c_Proyecto == null)
+            C_Servicio c_Servicio = db.C_Servicio.Find(id);
+            if (c_Servicio == null)
             {
                 return HttpNotFound();
             }
-            return View(c_Proyecto);
+            return View(c_Servicio);
         }
 
-        // POST: Proyecto/Delete/5
+        // POST: Servicio/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            C_Proyecto c_Proyecto = db.C_Proyecto.Find(id);
-            db.C_Proyecto.Remove(c_Proyecto);
+            C_Servicio c_Servicio = db.C_Servicio.Find(id);
+            db.C_Servicio.Remove(c_Servicio);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

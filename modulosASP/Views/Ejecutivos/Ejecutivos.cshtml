@@ -1,5 +1,6 @@
 ﻿@using modulosASP.DTO;
 @model List<EjecutivoDto>
+
 @{
     ViewBag.Title = "Ejecutivos";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -26,11 +27,10 @@
                         <td>@Html.DisplayFor(Model => datos.Correo)</td>
                         <td>
                             <button type="button" class="btn btn-outline-warning btnEditar"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"
-                                        data-num="@datos.Num_Empleado"
-                                    >
-                            
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    data-num="@datos.Num_Empleado">
+
                                 Editar Ejecutivo
                             </button>
                             -
@@ -53,64 +53,90 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <form id="frmActualizar">
+                    <div class="mb-3">
+                        <input type="text" id="Num_Empleado" disabled />
 
-                <div class="mb-3">
-                    <input type="text" id="NumEjecutivo" disabled/>
-                </div>
+                    </div>
 
-                <div class="mb-3">
-                    <input type="text" class="form-control w-100" id="Nombre" />
-                </div>
+                    <div class="mb-3">
 
-                <div class="mb-3">
-                    <input type="email" class="form-control w-100" id="email" />
-                </div>
+                        <input type="text" class="form-control w-100" id="Nombre" />
+                    </div>
 
+                    <div class="mb-3">
+                        <input type="email" class="form-control w-100" id="Correo" />
+                    </div>
+                </form>
             </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="btnguardar">Save changes</button>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnActualizar">Save changes</button>
             </div>
+        </div>
     </div>
 </div>
 
 
 @section Scripts {
     <script>
+        //usaremo fetch para el put
 
         //llamamos el jquery
         $(document).ready(function () {
             //guardar datos
-            $('#btnguardar').on('click', function () {
+            $('#btnActualizar').on('click', function () {
 
                 //generamos un arreglo
                 let registro = DatosGuardar();
+                console.log("Objeto que se enviará al servidor metdod put :", registro);
 
-                console.log("Objeto que se enviará al servidor:", registro);
 
                 //llamamos la funcion de guardar datos en ajax
 
                 ActualizarDatos(registro);
 
                 function DatosGuardar() {
-                    let DatoRegistro = {
-                        Num_Empleado: $('#NumEjecutivo').val(),
-                        Nombre: $('#Nombre').val(),
-                        Correo: $('#email').val()
-                    };
+                    let DatoRegistro = {}; //generamos un arreglo
+
+                    //recorremos todos los elementos del formulario
+                    $('#frmActualizar').find("input, select, textarea").each(function () {
+                        let id = $(this).attr("id");   // usamos el id del input como nombre de propiedad
+                        let valor = $(this).val();     // obtenemos el valor
+                        if (id) {
+                            DatoRegistro[id] = valor;  // lo agregamos al objeto
+                        }
+
+                    });
+
                     return DatoRegistro;
+                }
+
+                function limpiarCajas() {
+                       $("#frmActualizar").find("input, select, textarea").each(function () {
+        $(this).val("");  // limpia el valor de cada input
+    });
                 }
 
                 function ActualizarDatos(DatoRegistro) {
                     $.ajax({
-                        type: 'PUT',
+                        type: 'POST',
                         url: '@Url.Action("ActualizarDatos", "Ejecutivos")',
                         data: DatoRegistro,
-                        success: function () {
-                            alert("Exito al actualizar");
-                        }, error: function () {
-                            alert("No entra al ajax");
+                        success: function (resp) {
+                          
+                        //Cerramos el modal
+                            $('#exampleModal').modal('hide');
+                            alert(resp.message);
+                        // Recargar tabla automáticamente
+                        // 🔹 Si usas DataTables:
+                        //$('#tb_ejecutivo').DataTable().ajax.reload();
+
+                        // 🔹 Si NO usas DataTables y es tabla normal:
+                         location.reload(); // refresca toda la página
+
+                        }, error: function (resp) {
+                            alert(resp.message);
                         }
                     });//Fin del ajax
 
@@ -133,10 +159,10 @@
         success: function (resp) {
             if (resp.success) {
                 $("#exampleModalLabel").text("Elemento " + resp.data.Nombre);
-                $("#NumEjecutivo").val(resp.data.Num_Empleado);
+                $("#Num_Empleado").val(resp.data.Num_Empleado);
                 $('#Nombre').val(resp.data.Nombre);
-                $("#email").val(resp.data.Correo)
-            
+                $("#Correo").val(resp.data.Correo)
+
             } else {
                 alert(resp.mensaje);
             }

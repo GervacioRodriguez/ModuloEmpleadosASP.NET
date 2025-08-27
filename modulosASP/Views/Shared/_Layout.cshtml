@@ -20,7 +20,7 @@
             <div class="navbar-header">
                 <button type="button" class="btn btn-outline-secondary navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar">
-                        @Html.ActionLink("Proyectos", "Proyectos", "Proyecto", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Proyectos", "Index", "Proyecto", new { area = "" }, new { @class = "navbar-brand" })
                     </span>
                 </button>
                 <button type="button" class="btn btn-outline-secondary navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,6 +33,18 @@
                         @Html.ActionLink("Lista de Elementos", "Empleados", "Empleado", new { area = "" }, new { @class = "navbar-brand" })
                     </span>
                 </button>
+
+                <button type="button" class="btn btn-outline-secondary navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">
+                        @Html.ActionLink("Servicios", "Index", "Servicio", new { area = " " }, new { @class = "navbar-brand" })
+                    </span>
+                </button>
+                <button type="button" class="btn btn-outline-secondary navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">
+                        @Html.ActionLink("Municipios", "Index", "Municipios", new { area = " " }, new { @class = "navbar-brand" })
+                    </span>
+                </button>
+
             </div>
         </div>
     </div>

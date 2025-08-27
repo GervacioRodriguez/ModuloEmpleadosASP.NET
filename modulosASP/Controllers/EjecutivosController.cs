@@ -86,7 +86,7 @@ namespace modulosASP.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPost]
         public ActionResult ActualizarDatos(C_Ejecutivo ActualizarEjecutivo)
         {
             //generamos el context0
@@ -111,7 +111,7 @@ namespace modulosASP.Controllers
                         new
                         {
                             success = true,
-                            message = "Actualizacion Correcta"
+                            message = "Se Actualizo Correctamente"
                         });
                 }
                 else
